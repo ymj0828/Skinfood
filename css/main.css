@@ -1,3 +1,16 @@
 @charset "utf-8";
 
 @import url(reset.css);
+
+.serch{
+  background: url(../images/검색아이콘.png) no-repeat;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.basket{
+  background: url(../images/장바구니아이콘.png) no-repeat;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
