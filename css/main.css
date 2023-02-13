@@ -116,10 +116,15 @@ header .menu .gnb_icon .basket{
   background: url(../images/오른쪽버튼.png);
   right: 80px;
 }
-
-
-
-
+.coupban{
+  margin-top: 30px;
+}
 .coupban img{
-  width: 800px;
+  width: 100%;
+}
+#content2{
+  margin-top: 80px;
+}
+#content2 span{
+  font-size: 32px;
 }
