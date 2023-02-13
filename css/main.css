@@ -123,8 +123,52 @@ header .menu .gnb_icon .basket{
   width: 100%;
 }
 #content2{
+  width: 1140px;
+  margin: auto;
   margin-top: 80px;
 }
 #content2 span{
   font-size: 32px;
+}
+#content2 .recomcont{
+  width: 554px;
+  margin-top: 40px;
+}
+#content2 .recomcont .drgSlide{
+  display: flex;
+}
+#content2 .recomcont .drgSlide li{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+#content2 .recomcont .drgSlide li .recomtop{
+
+}
+#content2 .recomcont .drgSlide li .recomtop img{
+  
+}
+#content2 .recomcont .drgSlide li .recombottom{
+  display: flex;
+  flex-direction: column;
+}
+#content2 .recomcont .drgSlide li .recombottom .recomfirst{
+  display: flex;
+}
+#content2 .recomcont .drgSlide li .recombottom .recomfirst img{
+  width: 109px;
+}
+#content2 .recomcont .drgSlide li .recombottom .recomfirst .txt{
+
+}
+
+
+#content2 .recomcont .drgSlide li .recombottom .recomsecond{
+  display: flex;
+}
+#content2 .recomcont .drgSlide li .recombottom .recomsecond img{
+  width: 109px;
+}
+#content2 .recomcont .drgSlide li .recombottom .recomsecond .txt{
+
 }
