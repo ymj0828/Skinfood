@@ -123,6 +123,7 @@ header .menu .gnb_icon .basket{
   width: 100%;
 }
 #content2{
+  position: relative;
   max-width: 1140px;
   margin: auto;
   margin-top: 80px;
@@ -131,7 +132,19 @@ header .menu .gnb_icon .basket{
 }
 #content2 span{
   font-size: 32px;
-  padding-left: 20px;
+  margin: 0 auto 40px;
+
+  max-width: 1040px;
+  width: 100%;
+  display: block;
+}
+#content2 .img{
+  position: absolute;
+  width: 235px;
+  height: 140px;
+  top: -20px;
+  right: 0px;
+  background: url(../images/도장로고.png) no-repeat;
 }
 #content2 .recomcont{
   margin: 40px auto 0;
@@ -171,6 +184,8 @@ header .menu .gnb_icon .basket{
 }
 #content2 .recomcont .drgSlide li .recombottom .recomfirst img{
   width: 109px;
+  background-color: #f9f9f9;
+  border: 1px solid #f6f6f6;
 }
 #content2 .recomcont .drgSlide li .recombottom .recomfirst .txt{
 
@@ -184,6 +199,8 @@ header .menu .gnb_icon .basket{
 }
 #content2 .recomcont .drgSlide li .recombottom .recomsecond img{
   width: 109px;
+  background-color: #f9f9f9;
+  border: 1px solid #f6f6f6;
 }
 #content2 .recomcont .drgSlide li .recombottom .recomsecond .txt{
 
