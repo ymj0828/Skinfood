@@ -129,21 +129,29 @@ header .menu .gnb_icon .basket{
 }
 #content2 span{
   font-size: 32px;
+  padding-left: 20px;
 }
 #content2 .recomcont{
-  width: 554px;
+  width: 1040px;
   margin-top: 40px;
+  overflow: hidden;
+  height: 539.6px;
+
 }
 #content2 .recomcont .drgSlide{
   display: flex;
+
+  /* position: absolute; */
 }
 #content2 .recomcont .drgSlide li{
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  height: 100%;
+  display: block;
 }
 #content2 .recomcont .drgSlide li .recomtop{
-
+  margin-bottom: 32px;
 }
 #content2 .recomcont .drgSlide li .recomtop img{
   
@@ -151,9 +159,12 @@ header .menu .gnb_icon .basket{
 #content2 .recomcont .drgSlide li .recombottom{
   display: flex;
   flex-direction: column;
+  
 }
 #content2 .recomcont .drgSlide li .recombottom .recomfirst{
   display: flex;
+  border: 1px solid #f6f6f6;
+
 }
 #content2 .recomcont .drgSlide li .recombottom .recomfirst img{
   width: 109px;
@@ -165,6 +176,8 @@ header .menu .gnb_icon .basket{
 
 #content2 .recomcont .drgSlide li .recombottom .recomsecond{
   display: flex;
+  border: 1px solid #f6f6f6;
+
 }
 #content2 .recomcont .drgSlide li .recombottom .recomsecond img{
   width: 109px;
