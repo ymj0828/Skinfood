@@ -138,7 +138,7 @@ header .menu .gnb_icon .basket{
   width: 100%;
   display: block;
 }
-#content2 .img{
+#content2>.img{
   position: absolute;
   width: 235px;
   height: 140px;
@@ -149,12 +149,12 @@ header .menu .gnb_icon .basket{
 #content2 .recomcont{
   margin: 40px auto 0;
   overflow: hidden;
-  height: 613.6px;
+
 }
 #content2 .recomcont .drgSlide{
   max-width: 1040px;
   width: 100%;
-  display: flex;
+
   margin: 0 auto;
   /* position: absolute; */
 }
@@ -175,20 +175,24 @@ header .menu .gnb_icon .basket{
 #content2 .recomcont .drgSlide li .recombottom{
   display: flex;
   flex-direction: column;
-  
 }
 #content2 .recomcont .drgSlide li .recombottom .recomfirst{
   display: flex;
   border: 1px solid #f6f6f6;
   margin-bottom: 10px;
 }
-#content2 .recomcont .drgSlide li .recombottom .recomfirst img{
-  width: 109px;
+#content2 .recomcont .drgSlide li .recombottom .recomfirst .img{
+  flex: 0.25;
+}
+#content2 .recomcont .drgSlide li .recombottom .recomfirst .img img{
+  max-width: 109.2px;
   background-color: #f9f9f9;
   border: 1px solid #f6f6f6;
+  width: 100%;
+  box-sizing: border-box;
 }
 #content2 .recomcont .drgSlide li .recombottom .recomfirst .txt{
-
+  flex: 0.75;
 }
 
 
@@ -197,11 +201,16 @@ header .menu .gnb_icon .basket{
   border: 1px solid #f6f6f6;
 
 }
-#content2 .recomcont .drgSlide li .recombottom .recomsecond img{
-  width: 109px;
+#content2 .recomcont .drgSlide li .recombottom .recomsecond .img{
+  flex: 0.25;
+}
+#content2 .recomcont .drgSlide li .recombottom .recomsecond .img img{
+  max-width: 109.2px;
   background-color: #f9f9f9;
   border: 1px solid #f6f6f6;
+  width: 100%;
+  box-sizing: border-box;
 }
 #content2 .recomcont .drgSlide li .recombottom .recomsecond .txt{
-
+  flex: 0.75;
 }
