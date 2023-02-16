@@ -128,6 +128,7 @@ header .menu .gnb_icon .basket{
   margin: 80px auto 73px;
   box-sizing: border-box;
   background-color: transparent;
+  padding: 0 30px 0
 }
 #content2 span{
   font-size: 32px;
@@ -147,7 +148,7 @@ header .menu .gnb_icon .basket{
 }
 #content2 .recomcont{
   margin: 40px auto 0;
-  overflow: hidden;
+
 
 }
 #content2 .recomcont .drgSlide{
@@ -216,6 +217,7 @@ header .menu .gnb_icon .basket{
 
 #content3{
   background: url(../images/content3_bg.jpg);
+  padding: 0 30px 0;
 }
 #content3 span{
   font-size: 32px;
@@ -225,17 +227,37 @@ header .menu .gnb_icon .basket{
 }
 #content3 .popcont{
   margin: 0 auto;
-  max-width: 1020px;
-  
+  max-width: 1040px;
 }
 #content3 .popcont div>li{
   position: relative;
+  margin: 0 10px;
+}
+#content3 .popcont .slick-slide:nth-child(odd){
+  margin-top: 20px;
 }
 #content3 .popcont li .img{
   max-width: 240px;
   background-color: #f9f9f9;
-  margin-right: 20px;
 }
 #content3 .popcont li .img img{
   width: 100%;
+}
+#content3 .popcont li .txt{
+  padding: 15px 0
+}
+#content3 .popcont li .txt .txt1{
+  font-size: 15px;
+}
+#content3 .popcont li .txt .txt2{
+
+}
+#content3 .popcont li .txt .txt3{
+
+}
+#content3 .popcont li .txt .txt4{
+
+}
+#content3 .popcont li .txt .txt5{
+
 }
