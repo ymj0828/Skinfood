@@ -8,5 +8,11 @@ $('.drgSlide').slick({
   slidesToScroll:1,
   dots:true
 })
+$('.popcont').slick({
+  infinite:true,
+  slidesToShow:4,
+  slidesToScroll:4,
+  dots:true
+})
 
 });

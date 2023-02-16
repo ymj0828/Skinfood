@@ -125,8 +125,7 @@ header .menu .gnb_icon .basket{
 #content2{
   position: relative;
   max-width: 1140px;
-  margin: auto;
-  margin-top: 80px;
+  margin: 80px auto 73px;
   box-sizing: border-box;
   background-color: transparent;
 }
@@ -213,4 +212,30 @@ header .menu .gnb_icon .basket{
 }
 #content2 .recomcont .drgSlide li .recombottom .recomsecond .txt{
   flex: 0.75;
+}
+
+#content3{
+  background: url(../images/content3_bg.jpg);
+}
+#content3 span{
+  font-size: 32px;
+  padding: 40px 0 38px;
+  display: block;
+  text-align: center;
+}
+#content3 .popcont{
+  margin: 0 auto;
+  max-width: 1020px;
+  
+}
+#content3 .popcont div>li{
+  position: relative;
+}
+#content3 .popcont li .img{
+  max-width: 240px;
+  background-color: #f9f9f9;
+  margin-right: 20px;
+}
+#content3 .popcont li .img img{
+  width: 100%;
 }
