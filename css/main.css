@@ -130,13 +130,11 @@ header .menu .gnb_icon .basket{
   background-color: transparent;
   padding: 0 30px 0
 }
-#content2 span{
+#content2 p{
   font-size: 32px;
   margin: 0 auto 40px;
-
   max-width: 1040px;
   width: 100%;
-  display: block;
 }
 #content2>.img{
   position: absolute;
@@ -217,12 +215,11 @@ header .menu .gnb_icon .basket{
 
 #content3{
   background: url(../images/content3_bg.jpg);
-  padding: 0 30px 0;
+  padding: 0 30px 83px;
 }
-#content3 span{
+#content3 p{
   font-size: 32px;
   padding: 40px 0 38px;
-  display: block;
   text-align: center;
 }
 #content3 .popcont{
@@ -260,4 +257,53 @@ header .menu .gnb_icon .basket{
 }
 #content3 .popcont li .txt .txt5{
 
+}
+#content4{
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 70px;
+  margin: 70px auto;
+  padding: 0 30px 0;
+  box-sizing: border-box;
+}
+#content4 p{
+  max-width: 1040px;
+  font-size: 32px;
+  margin: 0 auto;
+  display: block;
+}
+#content4 .catitem{
+  max-width: 1040px;
+  width: 100%;
+  display: flex;
+  margin: 35px auto 25px;
+}
+#content4 .catitem li{
+  margin: 0 18px;
+  width: 100%;
+}
+#content4 .catitem li:last-child{
+  margin-right: 0;
+}
+#content4 .catitem li img{
+  width: 100%;
+}
+#content4 .catitem li span{
+  font-size: 15px;
+  display: block;
+  text-align: center;
+}
+#content4 .catcont div>li{
+  position: relative;
+  margin: 0 10px;
+}
+#content4 .catcont .slick-slide:nth-child(odd){
+  margin-top: 20px;
+}
+#content4 .catcont li .img{
+  max-width: 240px;
+  background-color: #f9f9f9;
+}
+#content4 .catcont li .img img{
+  width: 100%;
 }
