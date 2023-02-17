@@ -1,106 +1,178 @@
 const con2data = {
+	'스킨케어':{
+    사진:['1-1','1-2','1-3','1-4','1-5','1-6','1-7','1-8','1-9','1-10','1-11','1-12'],
+		상품명:['★02/23 순차출고★[당근패드]캐롯 카로틴 카밍 워터 패드 (250g, 60매)','[미나리패드]판토테닉 워터파슬리 클리어 패드 (250g, 60매)','로열허니 프로폴리스 인리치 에센스 (50ml)','[미나리에센스]여드름적합, 판토테닉 워터 파슬리 사일런스 에센스 (50ml)','로열허니 프로폴리스 인리치 멀티 밤(9g)','[당근크림] 캐롯 카로틴 릴리프 크림 (70ml)','[미나리패드 리필]판토테닉 워터파슬리 클리어 패드 리필(30매)','[미나리 토너]여드름적합, 판토테닉 워터 파슬리 토너 (300ml)','로열허니 프로폴리스 인리치 에멀전 (160ml)','[단독SET+증정] 골드 캐비어 이엑스 토너+크림+아이세럼','로열허니 프로폴리스 인리치 크림 미스트(120ml)','흑석류 에너지 세럼 (52ml)'],
+    기존가:['₩ 26,000','₩ 26,000','₩ 32,000','₩ 28,000','₩ 22,000','₩ 32,000','₩ 13,000','₩ 24,000','₩ 26,000','₩ 99,000','₩ 22,000','₩ 32,000'],
+		판매가:['₩ 16,900','₩ 16,900','₩ 20,800','₩ 18,200','₩ 14,300','₩ 20,800','₩ 8,450','₩ 14,400','₩ 15,600','₩ 74,250','₩ 13,200','₩ 19,200'],
+		평점:['5','4.9','5','4.9','4.9','4.9','5','4.9','5','5','4.9','4.9',],
+		리뷰수:['점 (9,996)','점 (778)','점 (18,677)','점 (1,266)','점 (72)','점 (1,543)','점 (45)','점 (383)','점 (334)','점 (341)','점 (111)','점 (779)']
+	},
 	"마스크":{
-    사진:['2-1','2-2'],
+    사진:['2-1','2-2','2-3','2-4','2-5','2-6','2-7','2-8','2-9','2-10','2-11','2-12'],
     상품명:['[긴급진정] 판토테닉 워터 파슬리 마스크(미나리 마스크)(24ml)','[꿀광보습] 로열허니 프로폴리스 인리치 마스크(30ml)','[수분진정] 캐롯 카로틴 마스크(당근 마스크)(27ml)','[수분생기] 수비드 마스크시트(브로콜리) (18g)','이지 드레싱 마스크 시트, 파슬리 워터 (28g)','이지 드레싱 마스크 시트, 코코넛 젤리 (37g)','레몬 딜 버터 푸드마스크 120g','블랙슈가 퍼펙트 에센셜 스크럽 2X (210g)','라이스 데일리 브라이트닝 마스크 워시오프(210g)','블랙슈가 마스크 워시오프 (100g)','라이스 마스크 워시오프 (100g)','에그 화이트 포어 마스크 (125g)'],
-    기존가:['₩ 2,100','₩ 2,100','₩ 1,950','₩ 1,100','₩ 3,000','₩ 3,000','₩ 9,750','₩ 12,350','₩ 12,350','₩ 7,000','₩ 7,000','₩ 7,000'],
-		사진1:"2-1",상품명1:"라이스 데일리 브라이트닝 마스크 워시오프(210g)",기존가1:"₩ 19,000",판매가1:"₩ 12,350",평점1:"4.8",리뷰수:"점 (208)",사진2:"2-2",패키지2:"패키지",여행지2:"괌 4,5,6일 #PIC #베스트셀러",해시태그2:"#올인클루시브 골드카드 #70여가지 무료 액티비티",금액2:"1,289,000원~",사진3:"2-3",패키지3:"패키지",여행지3:"[스테디셀러] 제주 3일",해시태그3:"#우도관광 #제주핵심명소 #현지특식 #섬여행 #감귤체험 #겨울 #동백",금액3:"299,000원~",
+		기존가:['₩ 3,000','₩ 3,000','₩ 3,000','','','','₩ 15,000','₩ 19,000','₩ 19,000','₩ 10,000','₩ 10,000','₩ 10,000',],
+    판매가:['₩ 2,100','₩ 2,100','₩ 1,950','₩ 1,100','₩ 3,000','₩ 3,000','₩ 9,750','₩ 12,350','₩ 12,350','₩ 7,000','₩ 7,000','₩ 7,000'],
+		평점:['4.9','5','5','4.9','4.7','4.9','4.9','4.9','4.8','4.9','4.8','4.9'],
+		리뷰수:['점 (51)','점 (51)','점 (107)','점 (235)','점 (23)','점 (11)','점 (51)','점 (855)','점 (209)','점 (1,150)','점 (144)','점 (145)',]
 	},
 	"선": {
-		"사진1": "2-1",
-		"패키지1": "패키지",
-		"여행지1": "싱가포르 5일 #루지#슈퍼트리쇼",
-		"해시태그1": "#4성업그레이드 #미식여행",
-		"금액1": "832,500원~",
-		"사진2": "2-2",
-		"패키지2": "패키지",
-		"여행지2": "보홀 5일 #헤난리조트 알로나비치",
-		"해시태그2": "#돌핀왓칭 #푼톳 호핑투어#전신마사지 #시티투어 #특식",
-		"금액2": "955,800원~",
-		"사진3": "2-3",
-		"패키지3": "호텔",
-		"여행지3": "덕산 스플라스 리솜",
-		"해시태그3": "#온수풀 #찬바람과 따뜻한 온천수 #노곤노곤",
-		"금액3": "221,570원~",
+
 	},
 	"클렌징": {
-		"사진1": "3-1",
-		"패키지1": "에어텔",
-		"여행지1": "방콕 자유여행 5일#수쿰빗11",
-		"해시태그1": "#시내중심#체크인 후 24시간 투숙",
-		"금액1": "479,000원~",
-		"사진2": "3-2",
-		"패키지2": "에어텔",
-		"여행지2": "타이베이 자유여행 4일 #4성호텔",
-		"해시태그2": "#CAESAR METRO #오전출발",
-		"금액2": "499,900원~",
-		"사진3": "3-3",
-		"패키지3": "에어텔",
-		"여행지3": "도쿄 자유여행 3~5일 #에어텔",
-		"해시태그3": "#최대쇼핑몰 이온몰 전용 우대권",
-		"금액3": "529,900원~",
+
 	},
 	"바디": {
-		"사진1": "4-1",
-		"패키지1": "패키지",
-		"여행지1": "[출발확정] 규슈 3일 #베스트셀러 #료칸온천호텔히젠야",
-		"해시태그1": "#월드체인특급힐튼 #온천여행 #캐널시티자유쇼핑",
-		"금액1": "949,900원~",
-		"사진2": "4-2",
-		"패키지2": "패키지",
-		"여행지2": "튀르키예(터키) 일주 8~10일 #베스트셀러",
-		"해시태그2": "#이스탄불 시내호텔1박 #루프탑레스토랑 #동굴호텔",
-		"금액2": "2,699,000원~",
-		"사진3": "4-3",
-		"패키지3": "패키지",
-		"여행지3": "하와이 6/7일 #[초특급]트럼프와이키키",
-		"해시태그3": "#디럭스오션뷰UP #럭셔리콘도미니엄",
-		"금액3": "2,421,600원~",
+
 	}
 };
 
 
 $(() => {
 
-  
-  const catitem = document.querySelectorAll('.catitem li')
+  const catitem = $('.catitem li')
+  const catcont = document.querySelector('.catcont')
+	
   const txt1 = document.querySelectorAll('.catcont .txt1')
-  const li = document.querySelectorAll('.catcont li')
-  console.log($('.catcont .txt1'))
+	
   
-  catitem.forEach((ele, num)=>{
-    ele.addEventListener('click', function(){
+  catitem.each((num, ele)=>{
+		console.log(ele)
+		ele.addEventListener('click', function(){
+			
+			if(ele.classList.contains('on')) return;
+			
+			catitem.each((num,ele2)=>{
+				$(ele2).removeClass('on')
+			});
+      $(ele).addClass('on');
+			$('.catcont').slick('slickRemove', null, null, true); 
+			// $('#slider-div').slick("unslick")
 
+			console.log(ele)
       const text = ele.children[1].innerText
-      console.log(con2data[text])
 
-    })
+			console.log(text)
 
+			
+			con2data[text].사진.forEach((b, a)=>{
+				
+				console.log(a)
+
+				$('.catcont').slick('slickAdd',`
+				<div>
+				<div>
+				<li>
+				<div class='img'>
+				<img src="./images/content4_${con2data[text].사진[a]}.jpg" alt="">
+				</div>
+				<div class='txt'>
+				<div class="txt1">${con2data[text].상품명[a]}</div>
+				<div class="txt2">${con2data[text].기존가[a]}</div>
+				<div class="txt3">${con2data[text].판매가[a]}</div>
+				<div class="txt4">${con2data[text].평점[a]}</div>
+				<div class="txt5">${con2data[text].리뷰수[a]}</div>
+				</div>
+				</li>
+				</div>
+				</div>
+				`);
+				// let crli = document.createElement('li')
+				// let crdivimg = document.createElement('div')
+				// let crimg = document.createElement('img')
+				// let crtxt = document.createElement('div')
+				// let crtxt1 = document.createElement('div')
+				// let crtxt2 = document.createElement('div')
+				// let crtxt3 = document.createElement('div')
+				// let crtxt4 = document.createElement('div')
+				// let crtxt5 = document.createElement('div')
+				
+				// crdivimg.classList.add('img')
+				// crtxt.classList.add('txt')
+				// crtxt1.classList.add('txt1')
+				// crtxt2.classList.add('txt2')
+				// crtxt3.classList.add('txt3')
+				// crtxt4.classList.add('txt4')
+				// crtxt5.classList.add('txt5')
+
+				// crdivimg.appendChild(crimg)
+				// crli.appendChild(crdivimg)
+				// crtxt.appendChild(crtxt1)
+				// crtxt.appendChild(crtxt2)
+				// crtxt.appendChild(crtxt3)
+				// crtxt.appendChild(crtxt4)
+				// crtxt.appendChild(crtxt5)
+				// crli.appendChild(crtxt)
+				// catcont.appendChild(crli)
+
+			// const img = $('.catcont li .img img')
+			// const txt1 = document.querySelectorAll('.catcont li .txt .txt1')
+			// const txt2 = document.querySelectorAll('.catcont li .txt .txt2')
+			// const txt3 = document.querySelectorAll('.catcont li .txt .txt3')
+			// const txt4 = document.querySelectorAll('.catcont li .txt .txt4')
+			// const txt5 = document.querySelectorAll('.catcont li .txt .txt5')
+			
+			// console.log(img)
+
+			// img[a].src = `./images/content4_${con2data[text].사진[a]}.jpg`
+			// txt1[a].innerText = `${con2data[text].상품명[a]}`
+
+				// console.log(li.length)
+				// console.log(con2data[text].사진.length)
+
+			})
+		// 	$('.catcont').slick({
+		// 		infinite:true,
+		// 		slidesToShow:4,
+		// 		slidesToScroll:4,
+		// 		dots:true
+		// })
+		var slider = $('.slider');  	
+		var slickOptions = { 		
+				infinite: true, 		
+			 slidesToShow: 1, 		
+			 slidesToScroll: 1, 		
+			 dots:true, 		
+			 arrows:true 	
+			};  	
+		$(window).on('load resize', function() { 		
+				if($(window).width() < 767) { 			
+						slider.slick('unslick'); 		
+				}else{ 			
+						slider.not('.slick-initialized').slick(slickOptions); 		
+				} 
+		})
+		
+	})
+		
+		
   })
-
-
-
-
-
-$('.drgSlide').slick({
-  infinite:true,
-  slidesToShow:2,
-  slidesToScroll:1,
-  dots:true
+	
+	
+	
+	
+	
+	$('.drgSlide').slick({
+		infinite:true,
+		slidesToShow:2,
+		slidesToScroll:1,
+		dots:true
+	})
+	$('.popcont').slick({
+		infinite:true,
+		slidesToShow:4,
+		slidesToScroll:4,
+		dots:true
+	})
+	
+	$('.catcont').slick({
+		infinite:true,
+		slidesToShow:4,
+		slidesToScroll:4,
+		dots:true
 })
-$('.popcont').slick({
-  infinite:true,
-  slidesToShow:4,
-  slidesToScroll:4,
-  dots:true
-})
-$('.catcont').slick({
-  infinite:true,
-  slidesToShow:4,
-  slidesToScroll:4,
-  dots:true
-})
-
-
-
-
+	
+	
+	
+	
+	
 });

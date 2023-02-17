@@ -296,6 +296,7 @@ header .menu .gnb_icon .basket{
 #content4 .catcont div>li{
   position: relative;
   margin: 0 10px;
+  pointer-events: none;
 }
 #content4 .catcont .slick-slide:nth-child(odd){
   margin-top: 20px;
