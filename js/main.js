@@ -7,7 +7,7 @@ const con2data = {
 		평점:['5','4.9','5','4.9','4.9','4.9','5','4.9','5','5','4.9','4.9',],
 		리뷰수:['점 (9,996)','점 (778)','점 (18,677)','점 (1,266)','점 (72)','점 (1,543)','점 (45)','점 (383)','점 (334)','점 (341)','점 (111)','점 (779)']
 	},
-	"마스크":{
+	'마스크':{
     사진:['2-1','2-2','2-3','2-4','2-5','2-6','2-7','2-8','2-9','2-10','2-11','2-12'],
     상품명:['[긴급진정] 판토테닉 워터 파슬리 마스크(미나리 마스크)(24ml)','[꿀광보습] 로열허니 프로폴리스 인리치 마스크(30ml)','[수분진정] 캐롯 카로틴 마스크(당근 마스크)(27ml)','[수분생기] 수비드 마스크시트(브로콜리) (18g)','이지 드레싱 마스크 시트, 파슬리 워터 (28g)','이지 드레싱 마스크 시트, 코코넛 젤리 (37g)','레몬 딜 버터 푸드마스크 120g','블랙슈가 퍼펙트 에센셜 스크럽 2X (210g)','라이스 데일리 브라이트닝 마스크 워시오프(210g)','블랙슈가 마스크 워시오프 (100g)','라이스 마스크 워시오프 (100g)','에그 화이트 포어 마스크 (125g)'],
 		기존가:['₩ 3,000','₩ 3,000','₩ 3,000','','','','₩ 15,000','₩ 19,000','₩ 19,000','₩ 10,000','₩ 10,000','₩ 10,000',],
@@ -15,13 +15,28 @@ const con2data = {
 		평점:['4.9','5','5','4.9','4.7','4.9','4.9','4.9','4.8','4.9','4.8','4.9'],
 		리뷰수:['점 (51)','점 (51)','점 (107)','점 (235)','점 (23)','점 (11)','점 (51)','점 (855)','점 (209)','점 (1,150)','점 (144)','점 (145)',]
 	},
-	"선": {
+	'선':{
 
 	},
-	"클렌징": {
+	"클렌징":{
 
 	},
-	"바디": {
+	"바디":{
+
+	},
+	"헤어":{
+
+	},
+	"남성":{
+
+	},
+	"베이스 메이크업":{
+
+	},
+	"컬러 메이크업":{
+
+	},
+	"미용 부자재":{
 
 	}
 };
@@ -29,124 +44,130 @@ const con2data = {
 
 $(() => {
 
-  const catitem = $('.catitem li')
-  const catcont = document.querySelector('.catcont')
+	console.log(con2data['스킨케어'])
+	$('.catcont').slick({
+		infinite:true,
+		slidesToShow:4,
+		slidesToScroll:4,
+		dots:true
+	})
 	
-  const txt1 = document.querySelectorAll('.catcont .txt1')
+	const catitem = $('.catitem li')
 	
-  
+	fn('스킨케어')
+	
+
   catitem.each((num, ele)=>{
 		console.log(ele)
 		ele.addEventListener('click', function(){
-			
+			console.log(ele)
 			if(ele.classList.contains('on')) return;
 			
 			catitem.each((num,ele2)=>{
 				$(ele2).removeClass('on')
+				$(ele).addClass('on');
+				console.log($(ele2).hasClass('on'))
+				if($(ele2).hasClass('on')){
+					console.log(ele2.children[0].src)
+					ele2.children[0].src = `./images/content4_cat_${num+1}_act.png`
+					console.log(num,ele2)
+				}else{
+					console.log(ele2.children[0])
+					ele2.children[0].src = `./images/content4_cat_${num+1}.png`
+				}
 			});
-      $(ele).addClass('on');
+
+
+
+
+
+
+			console.log($('.catitem').find('.on').children()[0])
+			
+			// const onimg =  $('.catitem').find('.on').children()[0]
+			// onimg.src = `./images/content4_cat_${1}_act.png`
+			
+			
 			$('.catcont').slick('slickRemove', null, null, true); 
 			// $('#slider-div').slick("unslick")
-
+			
 			console.log(ele)
-      const text = ele.children[1].innerText
-
-			console.log(text)
-
+      const innertext = ele.children[1].innerText
 			
-			con2data[text].사진.forEach((b, a)=>{
-				
-				console.log(a)
+			console.log(innertext)
 
-				$('.catcont').slick('slickAdd',`
-				<div>
-				<div>
-				<li>
-				<div class='img'>
-				<img src="./images/content4_${con2data[text].사진[a]}.jpg" alt="">
-				</div>
-				<div class='txt'>
-				<div class="txt1">${con2data[text].상품명[a]}</div>
-				<div class="txt2">${con2data[text].기존가[a]}</div>
-				<div class="txt3">${con2data[text].판매가[a]}</div>
-				<div class="txt4">${con2data[text].평점[a]}</div>
-				<div class="txt5">${con2data[text].리뷰수[a]}</div>
-				</div>
-				</li>
-				</div>
-				</div>
-				`);
-				// let crli = document.createElement('li')
-				// let crdivimg = document.createElement('div')
-				// let crimg = document.createElement('img')
-				// let crtxt = document.createElement('div')
-				// let crtxt1 = document.createElement('div')
-				// let crtxt2 = document.createElement('div')
-				// let crtxt3 = document.createElement('div')
-				// let crtxt4 = document.createElement('div')
-				// let crtxt5 = document.createElement('div')
-				
-				// crdivimg.classList.add('img')
-				// crtxt.classList.add('txt')
-				// crtxt1.classList.add('txt1')
-				// crtxt2.classList.add('txt2')
-				// crtxt3.classList.add('txt3')
-				// crtxt4.classList.add('txt4')
-				// crtxt5.classList.add('txt5')
-
-				// crdivimg.appendChild(crimg)
-				// crli.appendChild(crdivimg)
-				// crtxt.appendChild(crtxt1)
-				// crtxt.appendChild(crtxt2)
-				// crtxt.appendChild(crtxt3)
-				// crtxt.appendChild(crtxt4)
-				// crtxt.appendChild(crtxt5)
-				// crli.appendChild(crtxt)
-				// catcont.appendChild(crli)
-
-			// const img = $('.catcont li .img img')
-			// const txt1 = document.querySelectorAll('.catcont li .txt .txt1')
-			// const txt2 = document.querySelectorAll('.catcont li .txt .txt2')
-			// const txt3 = document.querySelectorAll('.catcont li .txt .txt3')
-			// const txt4 = document.querySelectorAll('.catcont li .txt .txt4')
-			// const txt5 = document.querySelectorAll('.catcont li .txt .txt5')
+			fn(innertext)
 			
-			// console.log(img)
-
-			// img[a].src = `./images/content4_${con2data[text].사진[a]}.jpg`
-			// txt1[a].innerText = `${con2data[text].상품명[a]}`
-
-				// console.log(li.length)
-				// console.log(con2data[text].사진.length)
-
-			})
-		// 	$('.catcont').slick({
-		// 		infinite:true,
-		// 		slidesToShow:4,
-		// 		slidesToScroll:4,
-		// 		dots:true
-		// })
-		var slider = $('.slider');  	
-		var slickOptions = { 		
-				infinite: true, 		
-			 slidesToShow: 1, 		
-			 slidesToScroll: 1, 		
-			 dots:true, 		
-			 arrows:true 	
+			
+			// 	$('.catcont').slick({
+				// 		infinite:true,
+				// 		slidesToShow:4,
+				// 		slidesToScroll:4,
+				// 		dots:true
+				// })
+				var slider = $('.slider');  	
+				var slickOptions = { 		
+					infinite: true, 		
+					slidesToShow: 1, 		
+					slidesToScroll: 1, 		
+					dots:true, 		
+					arrows:true 	
 			};  	
 		$(window).on('load resize', function() { 		
 				if($(window).width() < 767) { 			
-						slider.slick('unslick'); 		
+					slider.slick('unslick'); 		
 				}else{ 			
-						slider.not('.slick-initialized').slick(slickOptions); 		
+					slider.not('.slick-initialized').slick(slickOptions); 		
 				} 
+			})
+			
 		})
-		
-	})
 		
 		
   })
 	
+	
+	
+	function fn(key){
+		
+		con2data[key].사진.forEach((b, a)=>{
+			
+
+			
+			$('.catcont').slick('slickAdd',`
+			<div>
+			<div>
+			<li>
+			<div class='img'>
+			<img src="./images/content4_${con2data[key].사진[a]}.jpg" alt="">
+			</div>
+			<div class='txt'>
+			<div class="txt1">${con2data[key].상품명[a]}</div>
+			<div class="txt2">${con2data[key].기존가[a]}</div>
+			<div class="txt3">${con2data[key].판매가[a]}</div>
+			<div class="txt4">${con2data[key].평점[a]}</div>
+			<div class="txt5">${con2data[key].리뷰수[a]}</div>
+			</div>
+			</li>
+			</div>
+			</div>
+			`);
+
+		})
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	
