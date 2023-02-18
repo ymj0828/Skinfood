@@ -184,9 +184,11 @@ $(() => {
 			<div class='txt'>
 			<div class="txt1">${con2data[key].상품명[a]}</div>
 			<div class="txt2">${con2data[key].기존가[a]}</div>
-			<div class="txt3">${con2data[key].판매가[a]}</div>
-			<div class="txt4">${con2data[key].평점[a]}</div>
-			<div class="txt5">${con2data[key].리뷰수[a]}</div>
+			<div class="txt3">${con2data[key].판매가[a]}
+			<div class="txt4">
+			<span class="star"></span>${con2data[key].평점[a]}<span class="rev">${con2data[key].리뷰수[a]}</span>
+			</div>
+			</div>
 			</div>
 			</li>
 			</div>

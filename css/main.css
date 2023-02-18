@@ -266,7 +266,7 @@ header .menu .gnb_icon .basket{
   padding: 0 30px 0;
   box-sizing: border-box;
 }
-#content4 p{
+#content4>p{
   max-width: 1040px;
   font-size: 32px;
   margin: 0 auto;
@@ -285,8 +285,12 @@ header .menu .gnb_icon .basket{
 #content4 .catitem li:last-child{
   margin-right: 0;
 }
+#content4 .catitem li:first-child{
+  margin-left: 0;
+}
 #content4 .catitem li img{
   width: 100%;
+  margin-bottom: 8px;
 }
 #content4 .catitem li span{
   font-size: 15px;
@@ -304,7 +308,48 @@ header .menu .gnb_icon .basket{
 #content4 .catcont li .img{
   max-width: 240px;
   background-color: #f9f9f9;
+  margin: 0 auto;
 }
 #content4 .catcont li .img img{
   width: 100%;
+}
+li .txt{
+  margin: 15px auto;
+  max-width: 240px
+}
+li .txt1{
+  font-size: 15px;
+  line-height: 20px;
+  height: 40px;
+  letter-spacing: -1px;
+}
+li .txt2{
+  font-size: 15px;
+  text-decoration: line-through;
+  color: #888;
+}
+li .txt3{
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+li .txt4{
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  top: 5px;
+  right: 0;
+}
+li .txt4 .star{
+  background: url(../images/content4_평점별.png) no-repeat;
+  width: 15px;
+  height: 13px;
+  display: inline-block;
+}
+li .txt4 .rev{
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
 }
