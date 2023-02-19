@@ -95,12 +95,13 @@ $(() => {
 	const catitem = $('.catitem li')
 	
 	fn('스킨케어')
+	$(catitem[0]).addClass('on')
+	catitem[0].children[0].src = `./images/content4_cat_1_act.png`
 	
 
   catitem.each((num, ele)=>{
 		console.log(ele)
 		ele.addEventListener('click', function(){
-			console.log(ele)
 			if(ele.classList.contains('on')) return;
 			
 			catitem.each((num,ele2)=>{
@@ -116,10 +117,6 @@ $(() => {
 					ele2.children[0].src = `./images/content4_cat_${num+1}.png`
 				}
 			});
-
-
-
-
 
 
 			console.log($('.catitem').find('.on').children()[0])

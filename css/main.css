@@ -121,7 +121,22 @@ header .menu .gnb_icon .basket{
 }
 .coupban img{
   width: 100%;
+  object-fit: cover;
+  min-height: 100px;
 }
+
+#content2>p a::after,
+#content4>p a::after,
+#content5>p a::after{
+  width: 15px;
+  height: 28px;
+  background: url(../images/링크화살표.png) no-repeat;
+  content: '';
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: bottom;
+}
+
 #content2{
   position: relative;
   max-width: 1140px;
@@ -140,8 +155,6 @@ header .menu .gnb_icon .basket{
 }
 #content2 .recomcont{
   margin: 40px auto 0;
-
-
 }
 #content2 .recomcont .drgSlide{
   max-width: 1040px;
@@ -150,7 +163,7 @@ header .menu .gnb_icon .basket{
   margin: 0 auto;
   /* position: absolute; */
 }
-#content2 .recomcont .drgSlide div>li{
+#content2 .recomcont div>li{
   display: flex;
   flex-direction: column;
   margin: 0 10px;
@@ -158,53 +171,54 @@ header .menu .gnb_icon .basket{
   height: 100%;
   display: block;
 }
-#content2 .recomcont .drgSlide li .recomtop{
+#content2 .recomcont li .recomtop{
   margin-bottom: 32px;
 }
-#content2 .recomcont .drgSlide li .recomtop img{
+#content2 .recomcont li .recomtop img{
   width: 100%;
 }
-#content2 .recomcont .drgSlide li .recombottom{
+#content2 .recomcont li .recombottom{
   display: flex;
   flex-direction: column;
 }
-#content2 .recomcont .drgSlide li .recombottom .recomfirst{
+#content2 .recomcont li .recombottom .recomfirst{
   display: flex;
   border: 1px solid #f6f6f6;
   margin-bottom: 10px;
 }
-#content2 .recomcont .drgSlide li .recombottom .recomfirst .img{
-  flex: 0.25;
-}
-#content2 .recomcont .drgSlide li .recombottom .recomfirst .img img{
-  max-width: 109.2px;
-  background-color: #f9f9f9;
-  border: 1px solid #f6f6f6;
-  width: 100%;
-  box-sizing: border-box;
-}
-#content2 .recomcont .drgSlide li .recombottom .recomfirst .txt{
-  flex: 0.75;
-}
-
-
-#content2 .recomcont .drgSlide li .recombottom .recomsecond{
+#content2 .recomcont li .recombottom .recomsecond{
   display: flex;
   border: 1px solid #f6f6f6;
-
 }
-#content2 .recomcont .drgSlide li .recombottom .recomsecond .img{
+#content2 .recomcont li .recombottom .img{
   flex: 0.25;
 }
-#content2 .recomcont .drgSlide li .recombottom .recomsecond .img img{
+#content2 .recomcont li .recombottom .img img{
   max-width: 109.2px;
   background-color: #f9f9f9;
   border: 1px solid #f6f6f6;
   width: 100%;
   box-sizing: border-box;
 }
-#content2 .recomcont .drgSlide li .recombottom .recomsecond .txt{
+#content2 .recomcont li .recombottom .txt{
   flex: 0.75;
+}
+#content2 .recomcont li .txt .txt1{
+  font-size: 15px;
+  line-height: 20px;
+  height: 40px;
+  letter-spacing: -1px;
+}
+#content2 .recomcont li .txt .txt2{
+  font-size: 15px;
+  text-decoration: line-through;
+  color: #888;
+}
+#content2 .recomcont li .txt .txt3{
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 #content3{
@@ -248,29 +262,25 @@ header .menu .gnb_icon .basket{
 }
 #content3 .popcont li .txt{
   margin: 15px auto;
-  max-width: 240px
+  max-width: 240px;
 }
-#content3 .popcont li .txt .txt1{
-  font-size: 15px;
-}
-#content3 .popcont li .txt .txt2{
-
-}
-#content3 .popcont li .txt .txt3{
-
-}
-#content3 .popcont li .txt .txt4{
-
-}
-#content3 .popcont li .txt .txt5{
-
-}
-#content3 .popcont .slick-prev,
-#content3 .popcont .slick-next{
+#content3 .slick-prev,
+#content3 .slick-next,
+#content4 .slick-prev,
+#content4 .slick-next{
   width: 70px;
   height: 68px;
   top: 100px;
 }
+#content3 .slick-prev,
+#content4 .slick-prev{
+  left: -35px;
+}
+#content3 .slick-next,
+#content4 .slick-next{
+  right: -30px;
+}
+
 #content4{
   position: relative;
   max-width: 1140px;
@@ -297,6 +307,7 @@ header .menu .gnb_icon .basket{
 #content4 .catitem li{
   margin: 0 18px;
   width: 100%;
+  cursor: pointer;
 }
 #content4 .catitem li:last-child{
   margin-right: 0;
@@ -329,16 +340,10 @@ header .menu .gnb_icon .basket{
 #content4 .catcont li .img img{
   width: 100%;
 }
-#content4 .catcont .slick-prev,
-#content4 .catcont .slick-next{
-  width: 70px;
-  height: 68px;
-  top: 100px;
-}
 
 li .txt{
   margin: 15px auto;
-  max-width: 240px
+  max-width: 240px;
 }
 li .txt1{
   font-size: 15px;
@@ -375,4 +380,11 @@ li .txt4 .rev{
   font-size: 12px;
   font-weight: bold;
   display: inline-block;
+}
+
+#content5 p{
+  font-size: 32px;
+  margin: 0 auto 32px;
+  max-width: 1040px;
+  width: 100%;
 }
