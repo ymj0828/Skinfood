@@ -201,18 +201,6 @@ $(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-	
-	
-	
 	
 	$('.drgSlide').slick({
 		infinite:true,
@@ -226,6 +214,15 @@ $(() => {
 		slidesToScroll:4,
 		dots:true
 	})
+
+	let slick = document.querySelector('.popcont')
+	let tape = document.createElement('div')
+
+	slick.appendChild(tape)
+	tape.classList.add('tape')
+	console.log(slick)
+
+
 	
 	$('.catcont').slick({
 		infinite:true,

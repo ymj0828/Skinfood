@@ -128,21 +128,15 @@ header .menu .gnb_icon .basket{
   margin: 80px auto 73px;
   box-sizing: border-box;
   background-color: transparent;
-  padding: 0 30px 0
+  padding: 0 30px 0;
+  overflow: hidden;
+  background: url(../images/content2_스탬프.png) no-repeat top right;
 }
 #content2 p{
   font-size: 32px;
   margin: 0 auto 40px;
   max-width: 1040px;
   width: 100%;
-}
-#content2>.img{
-  position: absolute;
-  width: 235px;
-  height: 140px;
-  top: -20px;
-  right: 0px;
-  background: url(../images/도장로고.png) no-repeat;
 }
 #content2 .recomcont{
   margin: 40px auto 0;
@@ -214,8 +208,9 @@ header .menu .gnb_icon .basket{
 }
 
 #content3{
-  background: url(../images/content3_bg.jpg);
+  background: url(../images/content3_bg.jpg) center/cover;
   padding: 0 30px 83px;
+  overflow: hidden;
 }
 #content3 p{
   font-size: 32px;
@@ -226,6 +221,16 @@ header .menu .gnb_icon .basket{
   margin: 0 auto;
   max-width: 1040px;
 }
+
+#content3 .popcont .tape{
+  background-image: url(../images/content3_bg-tape.png);
+  width: 112px;
+  height: 103px;
+  position: absolute;
+  top: -30px;
+  left: -40px;
+}
+
 #content3 .popcont div>li{
   position: relative;
   margin: 0 10px;
@@ -236,12 +241,14 @@ header .menu .gnb_icon .basket{
 #content3 .popcont li .img{
   max-width: 240px;
   background-color: #f9f9f9;
+  margin: 0 auto;
 }
 #content3 .popcont li .img img{
   width: 100%;
 }
 #content3 .popcont li .txt{
-  padding: 15px 0
+  margin: 15px auto;
+  max-width: 240px
 }
 #content3 .popcont li .txt .txt1{
   font-size: 15px;
@@ -258,13 +265,22 @@ header .menu .gnb_icon .basket{
 #content3 .popcont li .txt .txt5{
 
 }
+#content3 .popcont .slick-prev,
+#content3 .popcont .slick-next{
+  width: 70px;
+  height: 68px;
+  top: 100px;
+}
 #content4{
+  position: relative;
   max-width: 1140px;
   width: 100%;
   margin-top: 70px;
   margin: 70px auto;
   padding: 0 30px 0;
   box-sizing: border-box;
+  overflow: hidden;
+  background: url(../images/content4_스탬프.png) no-repeat bottom right;
 }
 #content4>p{
   max-width: 1040px;
@@ -313,6 +329,13 @@ header .menu .gnb_icon .basket{
 #content4 .catcont li .img img{
   width: 100%;
 }
+#content4 .catcont .slick-prev,
+#content4 .catcont .slick-next{
+  width: 70px;
+  height: 68px;
+  top: 100px;
+}
+
 li .txt{
   margin: 15px auto;
   max-width: 240px

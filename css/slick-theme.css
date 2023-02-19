@@ -76,9 +76,9 @@
 
 .slick-prev
 {
-    left: -22px;
+    left: -45px;
     background-color: red;
-    background: url(../images/왼쪽버튼.png);
+    background: url(../images/왼쪽버튼.png) center/cover;
 }
 /* [dir='rtl'] .slick-prev
 {
@@ -96,8 +96,8 @@
 
 .slick-next
 {
-    right: -20px;
-    background: url(../images/오른쪽버튼.png);
+    right: -40px;
+    background: url(../images/오른쪽버튼.png) center/cover;
 }
 /* [dir='rtl'] .slick-next
 {
