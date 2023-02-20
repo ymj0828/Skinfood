@@ -434,5 +434,123 @@ li .txt4 .rev{
   top: 140px;
 }
 #content6{
-  margin-top: 100px;
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 100px auto 50px;
+  padding: 0 30px;
+}
+#content6 .instalogo{
+  width: 100%;
+  padding: 0 0 28px;
+  border-bottom: 1px solid #ddd;
+}
+#content6 .instalogo .img{
+  margin: auto;
+  width: 190px;
+  height: 30px;
+}
+#content6 .instagram{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#content6 .instagram .profile{
+  display: flex;
+}
+#content6 .instagram .profile .profile_img{
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+}
+#content6 .instagram .profile .profile_img img{
+  width: 100%;
+  border-radius: 50%;
+}
+#content6 .instagram .profile .profile_use{
+  padding-top: 10px;
+  font-size: 16px;
+}
+#content6 .instagram .follow{
+  border: 1px solid #666;
+  width: 98px;
+  height: 32px;
+  text-align: center;
+}
+#content6 .instagram .follow a{
+  line-height: 32px;
+  font-size: 15px;
+  display: block;
+}
+#content6 .photo{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+#content6 .photo .photoitem1,
+#content6 .photo .photoitem4,
+#content6 .photo .photoitem6,
+#content6 .photo .photoitem7,
+#content6 .photo .photoitem10,
+#content6 .photo .photoitem12,
+#content6 .photo .photoitem13,
+#content6 .photo .photoitem14
+{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+#content6 .photo .photoitem5,
+#content6 .photo .photoitem11{
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+#content6 .photo .photoitem img{
+  width: 100%;
+  height: 100%;
+}
+footer{
+  background: url(../images/footer_bg.png);
+}
+footer .select_btn{
+  position: relative;
+  background-color: transparent;
+  color: #ddd;
+  border: 1px solid #ddd;
+  height: 27px;
+  padding-left: 12px;
+  font-size: 15px;
+  text-align: left;
+  width: 148px;
+}
+footer .select_btn::before{
+  content: '';
+  margin: auto;
+  position: absolute;
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  right: 10px;
+  background: url(../images/footer_화살표아이콘.png) no-repeat;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+footer .select_btn:hover::before{
+  transform: rotate(180deg);
+}
+footer .select_list{
+  display: inline-block;
+  padding: 18px;
+  width: 100px;
+  font-size: 15px;
+  background-color: #3e3736;
+  color: #ddd;
 }
