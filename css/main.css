@@ -116,15 +116,14 @@ header .menu .gnb_icon .basket{
   background: url(../images/오른쪽버튼.png);
   right: 80px;
 }
-.coupban{
+.banner{
   margin-top: 30px;
 }
-.coupban img{
+.banner img{
   width: 100%;
   object-fit: cover;
   min-height: 100px;
 }
-
 #content2>p a::after,
 #content4>p a::after,
 #content5>p a::after{
@@ -382,9 +381,58 @@ li .txt4 .rev{
   display: inline-block;
 }
 
+#content5{
+  position: relative;
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+  padding: 0 80px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#content5::before{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 150px;
+  height: 147px;
+  left: 0;
+  background: url(../images/content5_당근.png) no-repeat;
+  animation: mover 2s infinite alternate;
+}
+@keyframes mover{
+  from{
+    bottom:20px;
+  }
+  to{
+    bottom:40px;
+  }
+}
 #content5 p{
   font-size: 32px;
   margin: 0 auto 32px;
-  max-width: 1040px;
+  max-width: 1022px;
   width: 100%;
+}
+#content5 .photoreview{
+
+}
+#content5 .photoreview div>li{
+  position: relative;
+  margin: 0 auto;
+  max-width: 1022px;
+}
+#content5 .photoreview li .img{
+  background-color: #f9f9f9;
+  margin: 0 auto;
+}
+#content5 .photoreview li img{
+  width: 100%;
+}
+#content5 .slick-prev,
+#content5 .slick-next{
+  top: 140px;
+}
+#content6{
+  margin-top: 100px;
 }

@@ -211,6 +211,12 @@ $(() => {
 		slidesToScroll:4,
 		dots:true
 	})
+	$('.photoreview').slick({
+		infinite:true,
+		slidesToShow:1,
+		slidesToScroll:1,
+		dots:true
+	})
 
 	let slick = document.querySelector('.popcont')
 	let tape = document.createElement('div')
@@ -219,14 +225,14 @@ $(() => {
 	tape.classList.add('tape')
 	console.log(slick)
 
-
-	
 	$('.catcont').slick({
 		infinite:true,
 		slidesToShow:4,
 		slidesToScroll:4,
 		dots:true
 })
+
+
 	
 	
 	
