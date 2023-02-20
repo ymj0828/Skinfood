@@ -518,7 +518,7 @@ li .txt4 .rev{
 footer{
   background: url(../images/footer_bg.png);
 }
-footer .select_btn{
+footer .txtwrap .nav_wrap .select_btn{
   position: relative;
   background-color: transparent;
   color: #ddd;
@@ -528,8 +528,9 @@ footer .select_btn{
   font-size: 15px;
   text-align: left;
   width: 148px;
+  cursor: pointer;
 }
-footer .select_btn::before{
+footer .txtwrap .nav_wrap .select_btn::before{
   content: '';
   margin: auto;
   position: absolute;
@@ -543,14 +544,26 @@ footer .select_btn::before{
   bottom: 0;
   transition: all 0.5s;
 }
-footer .select_btn:hover::before{
+footer .txtwrap .nav_wrap .select_btn:hover::before{
   transform: rotate(180deg);
 }
-footer .select_list{
+footer .txtwrap .nav_wrap .select_list{
   display: inline-block;
   padding: 18px;
   width: 100px;
   font-size: 15px;
   background-color: #3e3736;
   color: #ddd;
+}
+footer .txtwrap .nav_wrap .sns_txt .img:first-child{
+  background: url(../images/footer_sns_유튜브.png);
+  width: 30px;
+  height: 32px;
+}
+footer .txtwrap .nav_wrap .sns_txt .img:nth-child(2){
+  width: 30px;
+  height: 32px;
+}
+footer .txtwrap .nav_wrap .sns_txt .img:last-child(1){
+
 }
