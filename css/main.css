@@ -516,21 +516,60 @@ li .txt4 .rev{
   height: 100%;
 }
 footer{
-  background: url(../images/footer_bg.png);
+  background: url(../images/footer_bg.png) no-repeat center/cover;
+  height: 270px;
+  padding-top: 176px;
+  color: #fff;
 }
-footer .txtwrap .nav_wrap .select_btn{
+footer .txtwrap{
+  margin: auto;
+  max-width: 1200px;
+}
+footer .txtwrap .nav_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .txtwrap .nav_wrap .nav_txt{
+  display: flex;
+}
+footer .txtwrap .nav_wrap .nav_txt>li{
+  padding-right: 18px;
+}
+footer .txtwrap .nav_wrap .nav_txt>li:last-child{
+  padding-right: 0px;
+}
+footer .txtwrap .nav_wrap .nav_txt>li a{
+  color: #fff;
+  font-size: 15px;
+  padding-right: 18px;
+  border-right: 1px solid #999;
+}
+footer .txtwrap .nav_wrap .nav_txt>li:last-child a{
+  border-right: none;
+  padding-right: 0px;
+}
+footer .txtwrap .nav_wrap .select{
+  display: flex;
+}
+footer .txtwrap .nav_wrap .select .select_btn{
   position: relative;
   background-color: transparent;
   color: #ddd;
   border: 1px solid #ddd;
   height: 27px;
+  line-height: 27px;
   padding-left: 12px;
   font-size: 15px;
   text-align: left;
   width: 148px;
+  box-sizing: border-box;
   cursor: pointer;
 }
-footer .txtwrap .nav_wrap .select_btn::before{
+footer .txtwrap .nav_wrap .select .select_btn{
+  margin-left: 18px;
+}
+footer .txtwrap .nav_wrap .select .select_btn::before{
   content: '';
   margin: auto;
   position: absolute;
@@ -544,26 +583,41 @@ footer .txtwrap .nav_wrap .select_btn::before{
   bottom: 0;
   transition: all 0.5s;
 }
-footer .txtwrap .nav_wrap .select_btn:hover::before{
+footer .txtwrap .nav_wrap .select .select_btn:hover::before{
   transform: rotate(180deg);
 }
-footer .txtwrap .nav_wrap .select_list{
+footer .txtwrap .nav_wrap .select .select_list{
+  position: absolute;
   display: inline-block;
-  padding: 18px;
-  width: 100px;
+  padding: 17px;
+  width: 140px;
+  left: 0;
   font-size: 15px;
   background-color: #3e3736;
   color: #ddd;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  top: 26px;
+  border: 1px solid #999999;
+  height: 160px;
+}
+footer .txtwrap .nav_wrap .select .select_list li:hover{
+  text-decoration: underline;
+}
+footer .txtwrap .nav_wrap .sns_txt{
+  display: flex;
+}
+footer .txtwrap .nav_wrap .sns_txt .img{
+  width: 30px;
+  height: 32px;
+  margin-left: 12px;
 }
 footer .txtwrap .nav_wrap .sns_txt .img:first-child{
   background: url(../images/footer_sns_유튜브.png);
-  width: 30px;
-  height: 32px;
 }
 footer .txtwrap .nav_wrap .sns_txt .img:nth-child(2){
-  width: 30px;
-  height: 32px;
+  background: url(../images/footer_sns_페이스북.png);
 }
-footer .txtwrap .nav_wrap .sns_txt .img:last-child(1){
-
+footer .txtwrap .nav_wrap .sns_txt .img:last-child{
+  background: url(../images/footer_sns_인스타그램.png);
 }
