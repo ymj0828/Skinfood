@@ -588,7 +588,7 @@ footer .txtwrap .nav_wrap .select .select_btn:hover::before{
 }
 footer .txtwrap .nav_wrap .select .select_list{
   position: absolute;
-  display: inline-block;
+  display: none/* inline-block */;
   padding: 17px;
   width: 140px;
   left: 0;
@@ -620,4 +620,46 @@ footer .txtwrap .nav_wrap .sns_txt .img:nth-child(2){
 }
 footer .txtwrap .nav_wrap .sns_txt .img:last-child{
   background: url(../images/footer_sns_인스타그램.png);
+}
+footer .txtwrap .copy_wrap{
+  display: flex;
+  padding: 33px 0 65px 0;
+}
+footer .txtwrap .copy_wrap .copy_txt li{
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  padding-left: 10px;
+  color: #ddd;
+}
+footer .txtwrap .copy_wrap .copy_txt li:not(.first)::before{
+  background-color: #ddd;
+  content: '';
+  width: 1px;
+  display: inline-block;
+  height: 12px;
+  margin-right: 10px;
+}
+footer .txtwrap .copy_wrap .copy_txt li.first{
+  padding-left: 0px;
+}
+footer .txtwrap .cs_txt{
+  color: #ddd;
+  margin-left: 100px
+}
+footer .txtwrap .cs_txt .cs_txt1{
+  font-size: 15px;
+}
+footer .txtwrap .cs_txt .cs_txt2{
+  font-size: 32px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+footer .txtwrap .cs_txt .cs_txt3{
+  font-size: 5px;
+}
+footer .txtwrap .cs_txt .cs_txt4{
+  font-size: 5px;
+  margin-top: 5px;
 }
