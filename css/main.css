@@ -83,39 +83,39 @@ header .menu .gnb_icon .basket{
 }
 
 #content1{
-  width: 100%;
   position: relative;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
   overflow: hidden;
-  height: 100%;
 }
-#content1 .slide{
-  display: flex;
+#content1 .mainslide{
+  margin-bottom: 0;
+}
+#content1 .mainslide .slick-list{
+  padding-bottom: 0;
+}
+#content1 .mainslide div>li{
   position: relative;
+  margin: 0 auto;
 }
-#content1 .slide li{
-	flex-shrink: 0;
-	flex-basis: 100%;
-}
-#content1 .slide li img{
+#content1 .mainslide li img{
   width: 100%;
-  height: 100%;
 }
-#content1 .abtn{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 84px;
-  height: 81px;
-  cursor: pointer;
+#content1 .slick-prev,
+#content1 .slick-next{
+  top: 30%;
 }
-#content1 .prev{
-  background: url(../images/왼쪽버튼.png);
-  left: 80px;
+#content1 .slick-prev{
+  left: 0;
 }
-#content1 .next{
-  background: url(../images/오른쪽버튼.png);
-  right: 80px;
+#content1 .slick-next{
+  right: 0;
 }
+#content1 .mainslide .slick-dots{
+  top: -20px;
+}
+
 .banner{
   margin-top: 30px;
 }
@@ -124,6 +124,7 @@ header .menu .gnb_icon .basket{
   object-fit: cover;
   min-height: 100px;
 }
+
 #content2>p a::after,
 #content4>p a::after,
 #content5>p a::after{
@@ -166,7 +167,6 @@ header .menu .gnb_icon .basket{
   display: flex;
   flex-direction: column;
   margin: 0 10px;
-
   height: 100%;
   display: block;
 }
@@ -201,6 +201,7 @@ header .menu .gnb_icon .basket{
 }
 #content2 .recomcont li .recombottom .txt{
   flex: 0.75;
+  margin: 15px;
 }
 #content2 .recomcont li .txt .txt1{
   font-size: 15px;
@@ -234,7 +235,6 @@ header .menu .gnb_icon .basket{
   margin: 0 auto;
   max-width: 1040px;
 }
-
 #content3 .popcont .tape{
   background-image: url(../images/content3_bg-tape.png);
   width: 112px;
@@ -243,7 +243,6 @@ header .menu .gnb_icon .basket{
   top: -30px;
   left: -40px;
 }
-
 #content3 .popcont div>li{
   position: relative;
   margin: 0 10px;
@@ -259,17 +258,14 @@ header .menu .gnb_icon .basket{
 #content3 .popcont li .img img{
   width: 100%;
 }
-#content3 .popcont li .txt{
-  margin: 15px auto;
-  max-width: 240px;
-}
+
 #content3 .slick-prev,
 #content3 .slick-next,
 #content4 .slick-prev,
 #content4 .slick-next{
   width: 70px;
   height: 68px;
-  top: 100px;
+  top: 20%;
 }
 #content3 .slick-prev,
 #content4 .slick-prev{
@@ -414,17 +410,10 @@ li .txt4 .rev{
   max-width: 1022px;
   width: 100%;
 }
-#content5 .photoreview{
-
-}
 #content5 .photoreview div>li{
   position: relative;
   margin: 0 auto;
   max-width: 1022px;
-}
-#content5 .photoreview li .img{
-  background-color: #f9f9f9;
-  margin: 0 auto;
 }
 #content5 .photoreview li img{
   width: 100%;
@@ -433,6 +422,7 @@ li .txt4 .rev{
 #content5 .slick-next{
   top: 140px;
 }
+
 #content6{
   position: relative;
   max-width: 1000px;
@@ -510,11 +500,11 @@ li .txt4 .rev{
   grid-column: span 2;
   grid-row: span 3;
 }
-
 #content6 .photo .photoitem img{
   width: 100%;
   height: 100%;
 }
+
 footer{
   background: url(../images/footer_bg.png) no-repeat center/cover;
   height: 270px;
@@ -538,6 +528,9 @@ footer .txtwrap .nav_wrap .nav_txt>li{
 }
 footer .txtwrap .nav_wrap .nav_txt>li:last-child{
   padding-right: 0px;
+}
+footer .txtwrap .nav_wrap .nav_txt>li:hover{
+  text-decoration: underline 1px;
 }
 footer .txtwrap .nav_wrap .nav_txt>li a{
   color: #fff;
@@ -564,10 +557,8 @@ footer .txtwrap .nav_wrap .select .select_btn{
   text-align: left;
   width: 148px;
   box-sizing: border-box;
-  cursor: pointer;
-}
-footer .txtwrap .nav_wrap .select .select_btn{
   margin-left: 18px;
+  cursor: pointer;
 }
 footer .txtwrap .nav_wrap .select .select_btn::before{
   content: '';
@@ -585,6 +576,9 @@ footer .txtwrap .nav_wrap .select .select_btn::before{
 }
 footer .txtwrap .nav_wrap .select .select_btn:hover::before{
   transform: rotate(180deg);
+}
+footer .txtwrap .nav_wrap .select .select_btn:hover .select_list{
+  display: inline-block;
 }
 footer .txtwrap .nav_wrap .select .select_list{
   position: absolute;
@@ -645,7 +639,7 @@ footer .txtwrap .copy_wrap .copy_txt li.first{
 }
 footer .txtwrap .cs_txt{
   color: #ddd;
-  margin-left: 100px
+  margin-left: 110px
 }
 footer .txtwrap .cs_txt .cs_txt1{
   font-size: 15px;
