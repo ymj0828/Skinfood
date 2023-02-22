@@ -93,7 +93,7 @@ $(() => {
 			console.log(this.children)
 			console.log(this.contains(this.children[0]))
 			if(this.contains(this.children[0])){
-				this.children[0].style.display='flex'
+				this.children[1].style.display='flex'
 				this.classList.add('on')
 				console.log(this)
 			}
@@ -102,7 +102,7 @@ $(() => {
 		ele.addEventListener('mouseleave', function(){
 			console.log(li_2depth)
 			if(this.contains(this.children[0])){
-				this.children[0].style.display='none'
+				this.children[1].style.display='none'
 				this.classList.remove('on')
 			}
 		})
