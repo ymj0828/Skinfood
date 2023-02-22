@@ -86,24 +86,33 @@ $(() => {
 
 	const li_2depth = document.querySelectorAll('.gnb_first>li')
 	const ul = document.querySelector('.gnb_3depth')
+	const notFirst = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
+
+	console.log(ul.offsetLeft)
 
 	li_2depth.forEach(function(ele){
 		
 		ele.addEventListener('mouseenter', function(){
-			console.log(this.children)
-			console.log(this.contains(this.children[0]))
+			// console.log(this.children)
+			// console.log(this.contains(this.children[0]))
 			if(this.contains(this.children[0])){
-				this.children[1].style.display='flex'
-				this.classList.add('on')
-				console.log(this)
+				// this.children[1].style.display='flex'
+				// this.classList.add('on')
+				notFirst.forEach(function(ele2){
+					ele2.style.display='none'
+				})
+				// console.log(this)
 			}
 		})
-		console.log(li_2depth)
+
 		ele.addEventListener('mouseleave', function(){
-			console.log(li_2depth)
+			// console.log(li_2depth)
 			if(this.contains(this.children[0])){
-				this.children[1].style.display='none'
-				this.classList.remove('on')
+				// this.children[1].style.display='none'
+				// this.classList.remove('on')
+				notFirst.forEach(function(ele2){
+					ele2.style.display='block'
+				})
 			}
 		})
 	})
@@ -127,7 +136,7 @@ $(() => {
 	
 
   catitem.each((num, ele)=>{
-		console.log(ele)
+
 		ele.addEventListener('click', function(){
 			if(ele.classList.contains('on')) return;
 			

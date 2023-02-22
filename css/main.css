@@ -84,17 +84,18 @@ header .menu .gnb li .gnb_2depth li:hover{
 
 
 header .menu .gnb li .gnb_2depth:not(.gnb_first){
-  display: none;
-}
 
+}
 
 header .menu .gnb li .gnb_2depth li{
   font-size: 13px;
   padding: 13px 0;
 }
-header .menu .gnb li .gnb_2depth li a::before{
+header .menu .gnb li .gnb_2depth li a{
+  position: relative;
+}
+header .menu .gnb li .gnb_2depth li:hover a::before{
   content: '';
-  display: inline-block;
   background-color: #fdb812;
   height: 10px;
   position: absolute;
@@ -103,19 +104,23 @@ header .menu .gnb li .gnb_2depth li a::before{
   margin-top: 7px;
 }
 header .menu .gnb li .gnb_2depth li .gnb_3depth{
-  display: none;
+  display: flex;
   top: -11px;
   margin-left: 80px;
   position: absolute;
   height: 90%;
   padding-top: 10px;
   padding-bottom: 38px;
-  width: 870px;
   padding-left: 20px;
-  background-color: green;
+  background-color: #f9f9f9;
+  width: 65vw;
+  max-width: 830px;
   align-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
+}
+header .menu .gnb li .gnb_2depth li:hover .gnb_3depth{
+  display: flex;
 }
 header .menu .gnb li .gnb_2depth li:nth-child(4) .gnb_3depth{
   /* display: flex; */
@@ -157,6 +162,11 @@ header .smenuwrap .smenu{
   margin: 0 auto;
   max-width: 1300px;
 }
+/* header .smenuwrap .smenu .bg{
+  width: 100%;
+  background-color: #f9f9f9;
+  height: 100%;
+} */
 header .smenuwrap .smenu .img{
   margin-right: 900px;
   max-width: 340px;
