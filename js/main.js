@@ -84,6 +84,33 @@ const con2data = {
 
 $(() => {
 
+	const li_2depth = document.querySelectorAll('.gnb_first>li')
+	const ul = document.querySelector('.gnb_3depth')
+
+	li_2depth.forEach(function(ele){
+		
+		ele.addEventListener('mouseenter', function(){
+			console.log(this.children)
+			console.log(this.contains(this.children[0]))
+			if(this.contains(this.children[0])){
+				this.children[0].style.display='flex'
+				this.classList.add('on')
+				console.log(this)
+			}
+		})
+		console.log(li_2depth)
+		ele.addEventListener('mouseleave', function(){
+			console.log(li_2depth)
+			if(this.contains(this.children[0])){
+				this.children[0].style.display='none'
+				this.classList.remove('on')
+			}
+		})
+	})
+	
+
+
+
 	console.log(con2data['스킨케어'])
 	$('.catcont').slick({
 		infinite:true,
