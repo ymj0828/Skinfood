@@ -83,53 +83,73 @@ const con2data = {
 
 
 $(() => {
-
-	const li_2depth = document.querySelectorAll('.gnb_first>li')
-	const ul = document.querySelector('.gnb_3depth')
-	const notFirst = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
-	const smenuwrap = document.querySelector('.smenuwrap')
-	let vw
 	
+	const gnb = document.querySelector('.gnb')
+	const gnb2depth = document.querySelectorAll('.gnb_2depth')
+	const gnbFirstLi = document.querySelectorAll('.gnb_first>li')
+	const notGnbFirst = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
+	const gnb3depth = document.querySelector('.gnb_3depth')
+	const smenuWrap = document.querySelector('.smenuwrap')
+	let windowWidth
+
+
+	gnb2depth.forEach(function(ele, v){
+	
+		gnb.addEventListener('mouseenter', function(){
+			smenuWrap.style.display='block'
+			ele.style.display='block'
+		})
+		gnb.addEventListener('mouseleave', function(){
+			smenuWrap.style.display='none'
+			ele.style.display='none'
+		})
+		smenuWrap.addEventListener('mouseenter', function(){
+			smenuWrap.style.display='block'
+			ele.style.display='block'
+		})
+		smenuWrap.addEventListener('mouseleave', function(){
+			smenuWrap.style.display='none'
+			ele.style.display='none'
+		})
+
+	})
+		
 
 	$(window).on('load resize', function() { 		
-		console.log(ul.getBoundingClientRect().left)
-		
-		vw = window.innerWidth
+		console.log(gnb3depth.getBoundingClientRect().left)
+		windowWidth = window.innerWidth
 	})
 	
-	li_2depth.forEach(function(ele){
+
+	gnbFirstLi.forEach(function(gnbFirstLiEle){
 		
-		ele.addEventListener('mouseenter', function(){
-			// console.log(this.children)
-			// console.log(this.contains(this.children[0]))
+		gnbFirstLiEle.addEventListener('mouseenter', function(){
+
 			if(this.contains(this.children[1])){
-				this.children[1].style.display='flex'
+				// this.children[1].style.display='flex'
 				this.classList.add('on')
-				this.children[1].style.width = (vw - this.children[1].getBoundingClientRect().left - 37)+'px'
+				this.children[1].style.width = windowWidth - this.children[1].getBoundingClientRect().left - 37 + 'px'
 				
-				console.log(li_2depth[3])
-				if(this == li_2depth[3]){
-					this.children[1].style.height = 468+'px'
-					smenuwrap.style.height = 482+'px'
+				if(this == gnbFirstLi[3]){
+					this.children[1].style.height = 468 + 'px'
+					smenuWrap.style.height = 482 + 'px'
 				}
 				
-				notFirst.forEach(function(ele2){
-					ele2.style.display='none'
-					console.log(ul.style.width)
+				notGnbFirst.forEach(function(notGnbFirstEle){
+					notGnbFirstEle.style.display = 'none'
 				})
-				// console.log(this)
 			}
 		})
 		
-		ele.addEventListener('mouseleave', function(){
-			// console.log(li_2depth)
-			if(this.contains(this.children[1])){
-				this.children[1].style.display='none'
-				this.classList.remove('on')
-				smenuwrap.style.height = 260+'px'
+		gnbFirstLiEle.addEventListener('mouseleave', function(){
 
-				notFirst.forEach(function(ele2){
-					ele2.style.display='block'
+			if(this.contains(this.children[1])){
+				// this.children[1].style.display = 'none'
+				this.classList.remove('on')
+				smenuWrap.style.height = 260 + 'px'
+
+				notGnbFirst.forEach(function(notGnbFirstEle){
+					notGnbFirstEle.style.display = 'block'
 				})
 			}
 		})
