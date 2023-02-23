@@ -94,7 +94,7 @@ header .menu .gnb li .gnb_2depth li{
 header .menu .gnb li .gnb_2depth li a{
   position: relative;
 }
-header .menu .gnb li .gnb_2depth li:hover a::before{
+header .menu .gnb li .gnb_2depth li.on:hover a::before{
   content: '';
   background-color: #fdb812;
   height: 10px;
@@ -104,23 +104,23 @@ header .menu .gnb li .gnb_2depth li:hover a::before{
   margin-top: 7px;
 }
 header .menu .gnb li .gnb_2depth li .gnb_3depth{
-  display: flex;
+  display: none;
   top: -11px;
   margin-left: 80px;
   position: absolute;
-  height: 90%;
+  height: 246px;
   padding-top: 10px;
   padding-bottom: 38px;
   padding-left: 20px;
   background-color: #f9f9f9;
-  width: 65vw;
+  /* width: 65vw; */
   max-width: 830px;
   align-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
 }
 header .menu .gnb li .gnb_2depth li:hover .gnb_3depth{
-  display: flex;
+  /* display: flex; */
 }
 header .menu .gnb li .gnb_2depth li:nth-child(4) .gnb_3depth{
   /* display: flex; */

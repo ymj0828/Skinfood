@@ -87,29 +87,47 @@ $(() => {
 	const li_2depth = document.querySelectorAll('.gnb_first>li')
 	const ul = document.querySelector('.gnb_3depth')
 	const notFirst = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
+	const smenuwrap = document.querySelector('.smenuwrap')
+	let vw
+	
 
-	console.log(ul.offsetLeft)
-
+	$(window).on('load resize', function() { 		
+		console.log(ul.getBoundingClientRect().left)
+		
+		vw = window.innerWidth
+	})
+	
 	li_2depth.forEach(function(ele){
 		
 		ele.addEventListener('mouseenter', function(){
 			// console.log(this.children)
 			// console.log(this.contains(this.children[0]))
-			if(this.contains(this.children[0])){
-				// this.children[1].style.display='flex'
-				// this.classList.add('on')
+			if(this.contains(this.children[1])){
+				this.children[1].style.display='flex'
+				this.classList.add('on')
+				this.children[1].style.width = (vw - this.children[1].getBoundingClientRect().left - 37)+'px'
+				
+				console.log(li_2depth[3])
+				if(this == li_2depth[3]){
+					this.children[1].style.height = 468+'px'
+					smenuwrap.style.height = 482+'px'
+				}
+				
 				notFirst.forEach(function(ele2){
 					ele2.style.display='none'
+					console.log(ul.style.width)
 				})
 				// console.log(this)
 			}
 		})
-
+		
 		ele.addEventListener('mouseleave', function(){
 			// console.log(li_2depth)
-			if(this.contains(this.children[0])){
-				// this.children[1].style.display='none'
-				// this.classList.remove('on')
+			if(this.contains(this.children[1])){
+				this.children[1].style.display='none'
+				this.classList.remove('on')
+				smenuwrap.style.height = 260+'px'
+
 				notFirst.forEach(function(ele2){
 					ele2.style.display='block'
 				})
@@ -117,6 +135,15 @@ $(() => {
 		})
 	})
 	
+
+
+	
+	
+	
+
+
+
+
 
 
 
