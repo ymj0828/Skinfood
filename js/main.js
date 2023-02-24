@@ -89,11 +89,11 @@ $(() => {
 	const gnbFirstLi = document.querySelectorAll('.gnb_first>li')
 	const notGnbFirst = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
 	const gnb3depth = document.querySelector('.gnb_3depth')
-	const smenuWrap = document.querySelector('.smenuwrap')
+	const smenuWrap = document.querySelector('.smenu_wrap')
 	let windowWidth
 
 
-	gnb2depth.forEach(function(ele, v){
+	gnb2depth.forEach(function(ele){
 	
 		gnb.addEventListener('mouseenter', function(){
 			smenuWrap.style.display='block'
@@ -157,37 +157,28 @@ $(() => {
 	
 
 
-	
-	
-	
-
-
-
-
-
-
 
 	console.log(con2data['스킨케어'])
-	$('.catcont').slick({
+	$('.cat_slide').slick({
 		infinite:true,
 		slidesToShow:4,
 		slidesToScroll:4,
 		dots:true
 	})
 	
-	const catitem = $('.catitem li')
+	const cat_item = $('.cat_item li')
 	
 	fn('스킨케어')
-	$(catitem[0]).addClass('on')
-	catitem[0].children[0].src = `./images/content4_cat_1_act.png`
+	$(cat_item[0]).addClass('on')
+	cat_item[0].children[0].src = `./images/content4_cat_1_act.png`
 	
 
-  catitem.each((num, ele)=>{
+  cat_item.each((num, ele)=>{
 
 		ele.addEventListener('click', function(){
 			if(ele.classList.contains('on')) return;
 			
-			catitem.each((num,ele2)=>{
+			cat_item.each((num,ele2)=>{
 				$(ele2).removeClass('on')
 				$(ele).addClass('on');
 				console.log($(ele2).hasClass('on'))
@@ -202,13 +193,13 @@ $(() => {
 			});
 
 
-			console.log($('.catitem').find('.on').children()[0])
+			console.log($('.cat_item').find('.on').children()[0])
 			
-			// const onimg =  $('.catitem').find('.on').children()[0]
+			// const onimg =  $('.cat_item').find('.on').children()[0]
 			// onimg.src = `./images/content4_cat_${1}_act.png`
 			
 			
-			$('.catcont').slick('slickRemove', null, null, true); 
+			$('.cat_slide').slick('slickRemove', null, null, true); 
 			// $('#slider-div').slick("unslick")
 			
 			console.log(ele)
@@ -219,7 +210,7 @@ $(() => {
 			fn(innertext)
 			
 			
-			// 	$('.catcont').slick({
+			// 	$('.cat_slide').slick({
 				// 		infinite:true,
 				// 		slidesToShow:4,
 				// 		slidesToScroll:4,
@@ -254,7 +245,7 @@ $(() => {
 			
 
 			
-			$('.catcont').slick('slickAdd',`
+			$('.cat_slide').slick('slickAdd',`
 			<div>
 			<div>
 			<li>
@@ -281,7 +272,7 @@ $(() => {
 
 
 
-	$('.mainslide').slick({
+	$('.main_slide').slick({
 		infinite:true,
 		slidesToShow:1,
 		slidesToScroll:1,
@@ -290,19 +281,19 @@ $(() => {
 		autoplaySpeed:4000,
 		pauseOnHover:true
 	})
-	$('.drgSlide').slick({
+	$('.recom_slide').slick({
 		infinite:true,
 		slidesToShow:2,
 		slidesToScroll:1,
 		dots:true
 	})
-	$('.popcont').slick({
+	$('.populer_slide').slick({
 		infinite:true,
 		slidesToShow:4,
 		slidesToScroll:4,
 		dots:true
 	})
-	$('.photoreview').slick({
+	$('.review_slide').slick({
 		infinite:true,
 		slidesToShow:1,
 		slidesToScroll:1,
@@ -312,14 +303,14 @@ $(() => {
 		pauseOnHover:true
 	})
 
-	let slick = document.querySelector('.popcont')
+	let slick = document.querySelector('.populer_slide')
 	let tape = document.createElement('div')
 
 	slick.appendChild(tape)
 	tape.classList.add('tape')
 	console.log(slick)
 
-	$('.catcont').slick({
+	$('.cat_slide').slick({
 		infinite:true,
 		slidesToShow:4,
 		slidesToScroll:4,
