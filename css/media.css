@@ -1,5 +1,20 @@
 @charset "utf-8";
 
 @media screen and (max-width: 1100px){
+  footer{
+    padding-top: 156px;
+  }
+  footer .txt_wrap .nav_wrap{
+    justify-content: space-around;
+  }
+  footer .txt_wrap .nav_wrap .nav_txt{
+    margin-bottom: 20px;
+  }
+  footer .txt_wrap .copy_wrap{
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 900px){
 
 }
