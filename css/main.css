@@ -321,7 +321,7 @@ li .txt3 .txt4 .rev{
   overflow: hidden;
 }
 #content3 p{
-  font-size: 32px;
+  font-size: 2.13rem;
   margin-top: 40px;
   text-align: center;
 }
@@ -423,7 +423,7 @@ li .img .icon_wrap .cart{
   margin-bottom: 8px;
 }
 #content4 .cat_item li span{
-  font-size: 15px;
+  font-size: 1rem;
   display: block;
   text-align: center;
 }
@@ -515,7 +515,7 @@ li .img .icon_wrap .cart{
 }
 #content6 .instagram .profile .profile_use{
   padding-top: 10px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 #content6 .instagram .follow{
   border: 1px solid #666;
@@ -525,7 +525,7 @@ li .img .icon_wrap .cart{
 }
 #content6 .instagram .follow a{
   line-height: 32px;
-  font-size: 15px;
+  font-size: 1rem;
   display: block;
 }
 #content6 .photo{
@@ -585,7 +585,7 @@ footer .txt_wrap .nav_wrap .nav_txt>li:hover{
 }
 footer .txt_wrap .nav_wrap .nav_txt>li a{
   color: #fff;
-  font-size: 15px;
+  font-size: 1rem;
   padding-right: 14px;
   border-right: 1px solid #999;
 }
@@ -593,10 +593,13 @@ footer .txt_wrap .nav_wrap .nav_txt>li:last-child a{
   border-right: none;
   padding-right: 0px;
 }
-footer .txt_wrap .nav_wrap .select{
+footer .txt_wrap .seletsns_wrap{
   display: flex;
 }
-footer .txt_wrap .nav_wrap .select .select_btn{
+footer .txt_wrap .seletsns_wrap .select{
+  display: flex;
+}
+footer .txt_wrap .seletsns_wrap .select .select_btn{
   position: relative;
   background-color: transparent;
   color: #ddd;
@@ -604,13 +607,13 @@ footer .txt_wrap .nav_wrap .select .select_btn{
   height: 27px;
   line-height: 27px;
   padding-left: 12px;
-  font-size: 15px;
+  font-size: 1rem;
   width: 148px;
   box-sizing: border-box;
   margin-left: 18px;
   cursor: pointer;
 }
-footer .txt_wrap .nav_wrap .select .select_btn::before{
+footer .txt_wrap .seletsns_wrap .select .select_btn::before{
   content: '';
   margin: auto;
   position: absolute;
@@ -623,19 +626,19 @@ footer .txt_wrap .nav_wrap .select .select_btn::before{
   bottom: 0;
   transition: all 0.5s;
 }
-footer .txt_wrap .nav_wrap .select .select_btn:hover::before{
+footer .txt_wrap .seletsns_wrap .select .select_btn:hover::before{
   transform: rotate(180deg);
 }
-footer .txt_wrap .nav_wrap .select .select_btn:hover .select_list{
+footer .txt_wrap .seletsns_wrap .select .select_btn:hover .select_list{
   display: block;
 }
-footer .txt_wrap .nav_wrap .select .select_list{
+footer .txt_wrap .seletsns_wrap .select .select_list{
   display: none;
   position: absolute;
   padding: 17px;
   width: 140px;
   left: 0;
-  font-size: 15px;
+  font-size: 1rem;
   background-color: #3e3736;
   color: #ddd;
   overflow-y: scroll;
@@ -644,13 +647,13 @@ footer .txt_wrap .nav_wrap .select .select_list{
   border: 1px solid #999;
   height: 160px;
 }
-footer .txt_wrap .nav_wrap .select .select_list li:hover{
+footer .txt_wrap .seletsns_wrap .select .select_list li:hover{
   text-decoration: underline;
 }
-footer .txt_wrap .nav_wrap .sns_txt{
+footer .txt_wrap .seletsns_wrap .sns_txt{
   display: flex;
 }
-footer .txt_wrap .nav_wrap .sns_txt .img{
+footer .txt_wrap .seletsns_wrap .sns_txt .img{
   width: 30px;
   height: 32px;
   margin-left: 12px;
@@ -682,10 +685,10 @@ footer .txt_wrap .cs_txt{
   margin-left: 110px
 }
 footer .txt_wrap .cs_txt .cs_txt1{
-  font-size: 15px;
+  font-size: 1rem;
 }
 footer .txt_wrap .cs_txt .cs_txt2{
-  font-size: 32px;
+  font-size: 2.13rem;
   text-decoration: underline;
   margin-bottom: 10px;
 }
