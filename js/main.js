@@ -85,30 +85,30 @@ const con2data = {
 $(() => {
 	
 	const gnb = document.querySelector('.gnb')
-	const gnb2depth = document.querySelectorAll('.gnb_2depth')
-	const gnbFirstLi = document.querySelectorAll('.gnb_first>li')
-	const notGnbFirst = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
-	const gnb3depth = document.querySelector('.gnb_3depth')
-	const smenuWrap = document.querySelector('.smenu_wrap')
-	let windowWidth
+	const gnb_2depth = document.querySelectorAll('.gnb_2depth')
+	const gnb_first_li = document.querySelectorAll('.gnb_first>li')
+	const not_gnb_first = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
+	const gnb_3depth = document.querySelector('.gnb_3depth')
+	const smenu_wrap = document.querySelector('.smenu_wrap')
+	let window_width
 
 
-	gnb2depth.forEach(function(ele){
+	gnb_2depth.forEach(function(ele){
 	
 		gnb.addEventListener('mouseenter', function(){
-			smenuWrap.style.display='block'
+			smenu_wrap.style.display='block'
 			ele.style.display='block'
 		})
 		gnb.addEventListener('mouseleave', function(){
-			smenuWrap.style.display='none'
+			smenu_wrap.style.display='none'
 			ele.style.display='none'
 		})
-		smenuWrap.addEventListener('mouseenter', function(){
-			smenuWrap.style.display='block'
+		smenu_wrap.addEventListener('mouseenter', function(){
+			smenu_wrap.style.display='block'
 			ele.style.display='block'
 		})
-		smenuWrap.addEventListener('mouseleave', function(){
-			smenuWrap.style.display='none'
+		smenu_wrap.addEventListener('mouseleave', function(){
+			smenu_wrap.style.display='none'
 			ele.style.display='none'
 		})
 
@@ -116,160 +116,51 @@ $(() => {
 		
 
 	$(window).on('load resize', function() { 		
-		console.log(gnb3depth.getBoundingClientRect().left)
-		windowWidth = window.innerWidth
+		console.log(gnb_3depth.getBoundingClientRect().left)
+		window_width = window.innerWidth
 	})
 	
 
-	gnbFirstLi.forEach(function(gnbFirstLiEle){
+	gnb_first_li.forEach(function(gnb_first_li_ele){
 		
-		gnbFirstLiEle.addEventListener('mouseenter', function(){
+		gnb_first_li_ele.addEventListener('mouseenter', function(){
 
 			if(this.contains(this.children[1])){
 				// this.children[1].style.display='flex'
 				this.classList.add('on')
-				this.children[1].style.width = windowWidth - this.children[1].getBoundingClientRect().left - 37 + 'px'
+				this.children[1].style.width = window_width - this.children[1].getBoundingClientRect().left - 37 + 'px'
 				
-				if(this == gnbFirstLi[3]){
+				if(this == gnb_first_li[3]){
 					this.children[1].style.height = 468 + 'px'
-					smenuWrap.style.height = 482 + 'px'
+					smenu_wrap.style.height = 482 + 'px'
 				}
 				
-				notGnbFirst.forEach(function(notGnbFirstEle){
-					notGnbFirstEle.style.display = 'none'
+				not_gnb_first.forEach(function(not_gnb_first_ele){
+					not_gnb_first_ele.style.display = 'none'
 				})
 			}
 		})
 		
-		gnbFirstLiEle.addEventListener('mouseleave', function(){
+		gnb_first_li_ele.addEventListener('mouseleave', function(){
 
 			if(this.contains(this.children[1])){
 				// this.children[1].style.display = 'none'
 				this.classList.remove('on')
-				smenuWrap.style.height = 260 + 'px'
+				smenu_wrap.style.height = 260 + 'px'
 
-				notGnbFirst.forEach(function(notGnbFirstEle){
-					notGnbFirstEle.style.display = 'block'
+				not_gnb_first.forEach(function(not_gnb_first_ele){
+					not_gnb_first_ele.style.display = 'block'
 				})
 			}
 		})
 	})
-	
 
 
+	const populer_slide = document.querySelector('.populer_slide')
+	const tape = document.createElement('div')
 
-	console.log(con2data['스킨케어'])
-	$('.cat_slide').slick({
-		infinite:true,
-		slidesToShow:4,
-		slidesToScroll:4,
-		dots:true
-	})
-	
-	const cat_item = $('.cat_item li')
-	
-	fn('스킨케어')
-	$(cat_item[0]).addClass('on')
-	cat_item[0].children[0].src = `./images/content4_cat_1_act.png`
-	
-
-  cat_item.each((num, ele)=>{
-
-		ele.addEventListener('click', function(){
-			if(ele.classList.contains('on')) return;
-			
-			cat_item.each((num,ele2)=>{
-				$(ele2).removeClass('on')
-				$(ele).addClass('on');
-				console.log($(ele2).hasClass('on'))
-				if($(ele2).hasClass('on')){
-					console.log(ele2.children[0].src)
-					ele2.children[0].src = `./images/content4_cat_${num+1}_act.png`
-					console.log(num,ele2)
-				}else{
-					console.log(ele2.children[0])
-					ele2.children[0].src = `./images/content4_cat_${num+1}.png`
-				}
-			});
-
-
-			console.log($('.cat_item').find('.on').children()[0])
-			
-			// const onimg =  $('.cat_item').find('.on').children()[0]
-			// onimg.src = `./images/content4_cat_${1}_act.png`
-			
-			
-			$('.cat_slide').slick('slickRemove', null, null, true); 
-			// $('#slider-div').slick("unslick")
-			
-			console.log(ele)
-      const innertext = ele.children[1].innerText
-			
-			console.log(innertext)
-
-			fn(innertext)
-			
-			
-			// 	$('.cat_slide').slick({
-				// 		infinite:true,
-				// 		slidesToShow:4,
-				// 		slidesToScroll:4,
-				// 		dots:true
-				// })
-				var slider = $('.slider');  	
-				var slickOptions = { 		
-					infinite: true, 		
-					slidesToShow: 1, 		
-					slidesToScroll: 1, 		
-					dots:true, 		
-					arrows:true 	
-			};  	
-		$(window).on('load resize', function() { 		
-				if($(window).width() < 767) { 			
-					slider.slick('unslick'); 		
-				}else{ 			
-					slider.not('.slick-initialized').slick(slickOptions); 		
-				} 
-			})
-			
-		})
-		
-		
-  })
-	
-	
-	
-	function fn(key){
-		
-		con2data[key].사진.forEach((b, a)=>{
-			
-
-			
-			$('.cat_slide').slick('slickAdd',`
-			<div>
-			<div>
-			<li>
-			<div class='img'>
-			<img src="./images/content4_${con2data[key].사진[a]}.jpg" alt="">
-			</div>
-			<div class='txt'>
-			<div class="txt1">${con2data[key].상품명[a]}</div>
-			<div class="txt2">${con2data[key].기존가[a]}</div>
-			<div class="txt3">${con2data[key].판매가[a]}
-			<div class="txt4">
-			<span class="star"></span>${con2data[key].평점[a]}<span class="rev">${con2data[key].리뷰수[a]}</span>
-			</div>
-			</div>
-			</div>
-			</li>
-			</div>
-			</div>
-			`);
-
-		})
-
-	}
-
+	populer_slide.appendChild(tape)
+	tape.classList.add('tape')
 
 
 	$('.main_slide').slick({
@@ -293,6 +184,13 @@ $(() => {
 		slidesToScroll:4,
 		dots:true
 	})
+	$('.cat_slide').slick({
+		infinite:true,
+		slidesToShow:4,
+		slidesToScroll:4,
+		dots:true,
+		draggable:true
+	})
 	$('.review_slide').slick({
 		infinite:true,
 		slidesToShow:1,
@@ -302,25 +200,103 @@ $(() => {
 		autoplaySpeed:4000,
 		pauseOnHover:true
 	})
-
-	let slick = document.querySelector('.populer_slide')
-	let tape = document.createElement('div')
-
-	slick.appendChild(tape)
-	tape.classList.add('tape')
-	console.log(slick)
-
-	$('.cat_slide').slick({
-		infinite:true,
-		slidesToShow:4,
-		slidesToScroll:4,
-		dots:true
-})
-
-
 	
 	
+	$('.cat_slide').mousedown((e)=>{
+		e.preventDefault()
+	})
+
+	const cat_item = $('.cat_item li')
 	
+	$(cat_item[0]).addClass('on')
+	cat_item[0].children[0].src = `./images/content4_cat_1_act.png`
 	
+	fn('스킨케어')
+
+  cat_item.each((num, cat_item_click)=>{
+		cat_item_click.addEventListener('click', function(){
+
+			if(cat_item_click.classList.contains('on')) return;
+			
+			cat_item.each((num,cat_item_el)=>{
+				$(cat_item_el).removeClass('on');
+				$(cat_item_click).addClass('on');
+
+				if($(cat_item_el).hasClass('on')){
+					cat_item_el.children[0].src = `./images/content4_cat_${num+1}_act.png`
+				}else{
+					cat_item_el.children[0].src = `./images/content4_cat_${num+1}.png`
+				}
+			});
+
+			$('.cat_slide').slick('slickRemove', null, null, true); 
+			
+      const innertext = cat_item_click.children[1].innerText
+
+			fn(innertext)
+			
+			
+			// 	$('.cat_slide').slick({
+				// 		infinite:true,
+				// 		slidesToShow:4,
+				// 		slidesToScroll:4,
+				// 		dots:true
+				// })
+		// 		var slider = $('.slider');  	
+		// 		var slickOptions = { 		
+		// 			infinite: true, 		
+		// 			slidesToShow: 1, 		
+		// 			slidesToScroll: 1, 		
+		// 			dots:true, 		
+		// 			arrows:true 	
+		// 	};  	
+		// $(window).on('load resize', function() { 		
+		// 		if($(window).width() < 767) { 			
+		// 			slider.slick('unslick'); 		
+		// 		}else{ 			
+		// 			slider.not('.slick-initialized').slick(slickOptions); 		
+		// 		} 
+		// 	})
+			
+
+		})
+  })
 	
+
+	function fn(key){
+		
+		con2data[key].사진.forEach((b, a)=>{
+			
+			$('.cat_slide').slick('slickAdd',`
+			<div>
+			<div>
+			<li>
+			<div class='img'>
+			<img src="./images/content4_${con2data[key].사진[a]}.jpg" alt="">
+			<div class="icon_wrap">
+			<div class="wish"></div>
+			<div class="cart"></div>
+			</div>
+			</div>
+			<div class='txt'>
+			<div class="txt1">${con2data[key].상품명[a]}</div>
+			<div class="txt2">${con2data[key].기존가[a]}</div>
+			<div class="txt3">${con2data[key].판매가[a]}
+			<div class="txt4">
+			<span class="star"></span>${con2data[key].평점[a]}<span class="rev">${con2data[key].리뷰수[a]}</span>
+			</div>
+			</div>
+			</div>
+			</li>
+			</div>
+			</div>
+			`);
+			
+		})
+
+	}
+
+
+
+
 });

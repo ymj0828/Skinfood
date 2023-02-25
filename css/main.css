@@ -2,6 +2,9 @@
 
 @import url(reset.css);
 
+html{
+  font-size: 15px;
+}
 body{
   max-width: 1920px;
   margin: 0 auto;
@@ -13,7 +16,7 @@ header .tmenu_wrap{
   width: 100%;
   background-color: #f9f9f9;
 }
-header .tmenu{
+header .tmenu_wrap .tmenu{
   margin: 0px auto;
   max-width: 1300px;
   height: 38px;
@@ -21,21 +24,21 @@ header .tmenu{
   justify-content: flex-end;
   align-items: center;
 }
-header .tmenu .login{
+header .tmenu_wrap .tmenu .login{
   display: flex;
 }
-header .tmenu .login li{
+header .tmenu_wrap .tmenu .login li{
   margin-right: 20px;
 }
-header .tmenu .login li a:hover{
-  text-decoration: underline;
-}
-header .tmenu .login li a{
+header .tmenu_wrap .tmenu .login li a{
   font-size: 12px;
   color: #888;
   line-height: 38px;
 }
-header .tmenu #lang{
+header .tmenu_wrap .tmenu .login li a:hover{
+  text-decoration: underline;
+}
+header .tmenu_wrap .tmenu #lang{
   height: 22px;
   font-size: 12px;
   border: 1px solid #ccc;
@@ -67,7 +70,7 @@ header .menu_wrap .menu .gnb{
 }
 header .menu_wrap .menu .gnb>li{
   margin-right: 70px;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 header .menu_wrap .menu .gnb>li:last-child{
@@ -174,13 +177,6 @@ header .smenu_wrap .smenu .img img{
   width: 100%;
 }
 
-#content1{
-  position: relative;
-  width: 100%;
-  margin: auto;
-  box-sizing: border-box;
-  overflow: hidden;
-}
 #content1 .main_slide{
   margin-bottom: 0;
 }
@@ -188,7 +184,6 @@ header .smenu_wrap .smenu .img img{
   padding-bottom: 0;
 }
 #content1 .main_slide div>li{
-  position: relative;
   margin: 0 auto;
 }
 #content1 .main_slide li img{
@@ -217,9 +212,17 @@ header .smenu_wrap .smenu .img img{
   min-height: 100px;
 }
 
-#content2>p a::after,
-#content4>p a::after,
-#content5>p a::after{
+.content{
+  padding: 0 30px;
+  overflow: hidden;
+}
+.content p{
+  font-size: 2.13rem;
+  margin: 0 auto;
+  max-width: 1040px;
+  text-indent: 10px;
+}
+.content p a::after{
   width: 15px;
   height: 28px;
   background: url(../images/링크화살표.png) no-repeat;
@@ -230,16 +233,8 @@ header .smenu_wrap .smenu .img img{
 }
 
 #content2{
-  margin: 80px auto 0;
-  padding: 0 30px 0;
-  overflow: hidden;
+  margin-top: 80px;
   background: url(../images/content2_스탬프.png) no-repeat top right;
-}
-#content2 p{
-  font-size: 32px;
-  margin: 0 auto;
-  max-width: 1040px;
-  text-indent: 20px;
 }
 #content2 .recom_slide{
   max-width: 1040px;
@@ -283,27 +278,28 @@ header .smenu_wrap .smenu .img img{
 }
 
 li .txt{
-  font-size: 15px;
   margin: 15px auto;
   max-width: 240px;
 }
 li .txt1{
+  font-size: 1rem;
   line-height: 20px;
   letter-spacing: -1px;
 }
 li .txt2{
+  font-size: 1rem;
   text-decoration: line-through;
   color: #888;
 }
 li .txt3{
   position: relative;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-top: 5px;
 }
 li .txt3 .txt4{
   position: absolute;
-  font-size: 18px;
+  font-size: 1.2rem;
   top: 5px;
   right: 0;
 }
@@ -314,12 +310,12 @@ li .txt3 .txt4 .star{
   display: inline-block;
 }
 li .txt3 .txt4 .rev{
-  font-size: 12px;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
 #content3{
-  margin: 80px auto 0;
+  margin-top: 80px;
   background: url(../images/content3_bg.jpg) center/cover;
   padding: 0 30px 83px;
   overflow: hidden;
@@ -348,10 +344,42 @@ li .txt3 .txt4 .rev{
   margin-top: 20px;
 }
 #content3 .populer_slide li .img{
+  position: relative;
   background-color: #f9f9f9;
+  aspect-ratio: 1;
 }
 #content3 .populer_slide li .img img{
+  position: absolute;
   width: 100%;
+}
+
+li .img .icon_wrap{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  height: 35%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 35px;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+li .img:hover .icon_wrap{
+  display: flex;
+}
+li .img .icon_wrap div{
+  aspect-ratio: 1;
+  height: 100%;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+li .img .icon_wrap .wish{
+  background: url(../images/위시아이콘.png) no-repeat center/50% #fff;
+}
+li .img .icon_wrap .cart{
+  background: url(../images/장바구니추가아이콘.png) no-repeat center/50% #fff;
 }
 
 #content3 .slick-prev,
@@ -372,15 +400,8 @@ li .txt3 .txt4 .rev{
 }
 
 #content4{
-  margin: 70px auto 0;
-  padding: 0 30px 0;
-  overflow: hidden;
+  margin-top: 70px;
   background: url(../images/content4_스탬프.png) no-repeat bottom right;
-}
-#content4 p{
-  max-width: 1040px;
-  font-size: 32px;
-  margin: 0 auto;
 }
 #content4 .cat_item{
   max-width: 1040px;
@@ -412,48 +433,44 @@ li .txt3 .txt4 .rev{
 }
 #content4 .cat_slide div>li{
   margin: 0 10px;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 #content4 .cat_slide .slick-slide:nth-child(odd){
   margin-top: 20px;
 }
 #content4 .cat_slide li .img{
+  position: relative;
   background-color: #f9f9f9;
+  aspect-ratio: 1;
 }
 #content4 .cat_slide li .img img{
   width: 100%;
+  position: absolute;
 }
 
 #content5{
-  position: relative;
-  max-width: 1040px;
-  margin: 80px auto 0;
-  padding: 0 30px 0;
-  overflow: hidden;
+  margin-top: 80px;
 }
-#content5::before{
+#content5 .review_slide::before{
   position: absolute;
   content: '';
   width: 150px;
   height: 147px;
-  left: 0;
+  left: -80px;
   background: url(../images/content5_당근.png) no-repeat;
   animation: mover 2s infinite alternate;
 }
 @keyframes mover{
   from{
-    bottom:20px;
+    bottom:0px;
   }
   to{
-    bottom:40px;
+    bottom:20px;
   }
 }
-#content5 p{
-  font-size: 32px;
-  margin: 0 auto;
-  max-width: 1040px;
-}
 #content5 .review_slide{
+  max-width: 1040px;
+  margin: 32px auto 0;
   margin-top: 32px;
 }
 #content5 .review_slide li img{
@@ -558,7 +575,7 @@ footer .txt_wrap .nav_wrap .nav_txt{
   display: flex;
 }
 footer .txt_wrap .nav_wrap .nav_txt>li{
-  padding-right: 18px;
+  padding-right: 14px;
 }
 footer .txt_wrap .nav_wrap .nav_txt>li:last-child{
   padding-right: 0px;
@@ -569,7 +586,7 @@ footer .txt_wrap .nav_wrap .nav_txt>li:hover{
 footer .txt_wrap .nav_wrap .nav_txt>li a{
   color: #fff;
   font-size: 15px;
-  padding-right: 18px;
+  padding-right: 14px;
   border-right: 1px solid #999;
 }
 footer .txt_wrap .nav_wrap .nav_txt>li:last-child a{

@@ -225,6 +225,7 @@
                 $(markup).prependTo(_.$slideTrack);
             } else {
                 $(markup).appendTo(_.$slideTrack);
+                // $(_.$slideTrack).append(markup);
             }
         }
 
