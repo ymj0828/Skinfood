@@ -177,6 +177,16 @@ header .smenu_wrap .smenu .img img{
   width: 100%;
 }
 
+.scroll{
+  transform: translateY(30%);
+	opacity: 0;
+	transition: .8s ease-in-out;
+}
+.scroll.on{
+	transform: translateY(0);
+	opacity: 1;
+}
+
 #content1 .main_slide{
   margin-bottom: 0;
 }
@@ -693,7 +703,7 @@ footer .txt_wrap .copy_wrap .cs_txt{
   margin-left: 110px
 }
 footer .txt_wrap .copy_wrap .cs_txt .cs_txt1{
-  font-size: 1rem;
+  font-size: 15px;
 }
 footer .txt_wrap .copy_wrap .cs_txt .cs_txt2{
   font-size: 2.13rem;
@@ -706,4 +716,29 @@ footer .txt_wrap .copy_wrap .cs_txt .cs_txt3{
 footer .txt_wrap .copy_wrap .cs_txt .cs_txt4{
   font-size: 12px;
   margin-top: 5px;
+}
+
+.top_btn{
+  display: none;
+  opacity: 0;
+  position: fixed;
+  width: 70px;
+  height: 68px;
+  right: 50px;
+  bottom: 50px;
+  background: url(../images/top버튼.png) no-repeat center/cover;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 3;
+  cursor: pointer;
+}
+.top_btn::before{
+  width: 22px;
+  height: 12px;
+  content: '';
+  display: block;
+  background: url(../images/top버튼화살표.png) no-repeat center;
+  margin: 20px auto 0;
 }

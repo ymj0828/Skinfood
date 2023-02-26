@@ -116,7 +116,7 @@ $(() => {
 		
 
 	$(window).on('load resize', function() { 		
-		console.log(gnb_3depth.getBoundingClientRect().left)
+		// console.log(gnb_3depth.getBoundingClientRect().left)
 		window_width = window.innerWidth
 	})
 	
@@ -201,7 +201,7 @@ $(() => {
 	populer_slide.appendChild(tape)
 	tape.classList.add('tape')
 	
-	
+
 	$('.cat_slide').mousedown((e)=>{
 		e.preventDefault()
 	})
@@ -296,7 +296,68 @@ $(() => {
 
 	}
 
+	let scroll_top;
+	const top_btn = $('.top_btn')
+	let is_top_btn = 0;
+	const scroll_arr = [];
+  const scroll = $(".scroll");
+  const gap = $(window).height();
 
+  scroll.each((scroll_num, scroll_ele)=>{
+    scroll_arr[scroll_num] = $(scroll_ele).offset().top;
+  });	
+
+	console.log(scroll_arr)
+
+	function scAction(n){
+    if(scroll_top > scroll_arr[n] - gap - 150 /* && scroll_top < scroll_arr[n] + 300 */){
+      scroll.eq(n).addClass("on");
+    }
+    else{
+      scroll.eq(n).removeClass("on");
+    }
+  };
+
+
+	$(window).resize(() => {
+
+		scroll.each((scroll_num, scroll_ele) =>
+		scroll_arr[scroll_num] = $(scroll_ele).offset().top);
+		console.log(scroll_arr)
+
+});
+
+    $(window).scroll(function(){
+
+			scroll_top = $(this).scrollTop();
+
+			console.log(scroll_top);
+			// console.log(is_top_btn);
+
+			scroll.each((scroll_num)=>scAction(scroll_num));
+
+			if (scroll_top >= 300) {
+				if(is_top_btn) return
+				is_top_btn = 1;
+				top_btn.css({display:'block'})
+				top_btn.animate({opacity:'1'},300)
+
+			}
+			else {
+				if(!is_top_btn) return
+				is_top_btn = 0;
+				top_btn.animate({opacity:'0'},300, function(){
+				top_btn.css({display:'none'})
+
+				})
+
+			}
+
+	});
+
+	top_btn.click(() => {
+		$("html,body").animate({scrollTop: "0"}, 800, "easeOutQuart");
+	});
 
 
 });
