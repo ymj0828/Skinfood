@@ -156,13 +156,6 @@ $(() => {
 	})
 
 
-	const populer_slide = document.querySelector('.populer_slide')
-	const tape = document.createElement('div')
-
-	populer_slide.appendChild(tape)
-	tape.classList.add('tape')
-
-
 	$('.main_slide').slick({
 		infinite:true,
 		slidesToShow:1,
@@ -201,11 +194,18 @@ $(() => {
 		pauseOnHover:true
 	})
 	
+
+	const populer_slide = document.querySelector('.populer_slide')
+	const tape = document.createElement('div')
+
+	populer_slide.appendChild(tape)
+	tape.classList.add('tape')
+	
 	
 	$('.cat_slide').mousedown((e)=>{
 		e.preventDefault()
 	})
-
+	
 	const cat_item = $('.cat_item li')
 	
 	$(cat_item[0]).addClass('on')

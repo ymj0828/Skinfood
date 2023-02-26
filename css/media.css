@@ -10,29 +10,57 @@
   footer .txt_wrap .nav_wrap .nav_txt{
     margin-bottom: 20px;
   }
+  footer .txt_wrap .nav_wrap .seletsns_wrap .sns_txt{
+    margin-left: 30px;
+  }
   footer .txt_wrap .copy_wrap{
     padding-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 900px){
+  html{
+    font-size: 12px;
+  }
   header .menu_wrap .menu .gnb>li{
-    margin-right: 35px;
+    margin-right: 50px;
   }
   header .smenu_wrap .smenu .img{
     display: none;
   }
-  header .menu_wrap .menu .gnb li .gnb_2depth{
-    display: block;
-  }
   header .menu_wrap .menu .gnb li:first-child .gnb_2depth{
-    transform: translateX(-30px);
+    transform: translateX(-20px);
   }
   header .menu_wrap .menu .gnb li .gnb_2depth li{
-    padding: 13px 0;
     letter-spacing: -1px;
   }
+  header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth {
+    margin-left: 50px;
+  }
   header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth li{
-    padding-right: 10px;
+    padding-right: 0px;
+  }
+  #content4 .cat_item li{
+    margin: 0 9px;
+  }
+  footer{
+    padding-top: 100px;
+  }
+  footer .txt_wrap .copy_wrap{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  footer .txt_wrap .copy_wrap .cs_txt{
+    margin-top: 20px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+  }
+  footer .txt_wrap .copy_wrap .cs_txt p{
+    margin-right: 15px;
+  }
+  footer .txt_wrap .copy_wrap .cs_txt .cs_txt4{
+    margin-top: 0;
   }
 }
