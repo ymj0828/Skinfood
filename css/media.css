@@ -16,5 +16,23 @@
 }
 
 @media screen and (max-width: 900px){
-
+  header .menu_wrap .menu .gnb>li{
+    margin-right: 35px;
+  }
+  header .smenu_wrap .smenu .img{
+    display: none;
+  }
+  header .menu_wrap .menu .gnb li .gnb_2depth{
+    display: block;
+  }
+  header .menu_wrap .menu .gnb li:first-child .gnb_2depth{
+    transform: translateX(-30px);
+  }
+  header .menu_wrap .menu .gnb li .gnb_2depth li{
+    padding: 13px 0;
+    letter-spacing: -1px;
+  }
+  header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth li{
+    padding-right: 10px;
+  }
 }

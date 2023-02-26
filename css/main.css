@@ -262,7 +262,7 @@ header .smenu_wrap .smenu .img img{
   margin-bottom: 10px;
 }
 #content2 .recom_slide li .recom_bottom .img{
-  flex: 0.25;
+  flex: 0.35;
 }
 #content2 .recom_slide li .recom_bottom .img img{
   max-width: 109.2px;
@@ -272,7 +272,7 @@ header .smenu_wrap .smenu .img img{
   box-sizing: border-box;
 }
 #content2 .recom_slide li .recom_bottom .txt{
-  flex: 0.75;
+  flex: 0.65;
   margin: 15px;
   max-width: none;
 }
