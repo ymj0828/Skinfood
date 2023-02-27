@@ -169,20 +169,46 @@ $(() => {
 		infinite:true,
 		slidesToShow:2,
 		slidesToScroll:1,
-		dots:true
+		dots:true,
+		responsive:[
+			{
+				breakpoint: 721,
+				settings:{
+					slidesToShow:1
+				}
+			}
+		]
 	})
 	$('.populer_slide').slick({
 		infinite:true,
 		slidesToShow:4,
 		slidesToScroll:4,
-		dots:true
+		dots:true,
+		responsive:[
+			{
+				breakpoint: 721,
+				settings:{
+					slidesToShow:2,
+					slidesToScroll:2
+				}
+			}
+		]
 	})
 	$('.cat_slide').slick({
 		infinite:true,
 		slidesToShow:4,
 		slidesToScroll:4,
 		dots:true,
-		draggable:true
+		draggable:true,
+		responsive:[
+			{
+				breakpoint: 721,
+				settings:{
+					slidesToShow:2,
+					slidesToScroll:2
+				}
+			}
+		]
 	})
 	$('.review_slide').slick({
 		infinite:true,
@@ -358,6 +384,8 @@ $(() => {
 	top_btn.click(() => {
 		$("html,body").animate({scrollTop: "0"}, 800, "easeOutQuart");
 	});
+
+
 
 
 });

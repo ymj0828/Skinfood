@@ -11,6 +11,7 @@ body{
 }
 header{
   width: 100%;
+  background-color: #fff;
 }
 header .tmenu_wrap{
   width: 100%;
@@ -176,11 +177,14 @@ header .smenu_wrap .smenu .img{
 header .smenu_wrap .smenu .img img{
   width: 100%;
 }
+header .mgnb{
+  display: none;
+}
 
 .scroll{
-  transform: translateY(30%);
+  transform: translateY(30px);
 	opacity: 0;
-	transition: .8s ease-in-out;
+	transition: opacity .8s, transform .8s;
 }
 .scroll.on{
 	transform: translateY(0);
@@ -285,12 +289,10 @@ header .smenu_wrap .smenu .img img{
 #content2 .recom_slide li .recom_bottom .txt{
   flex: 0.75;
   margin: 15px;
-  max-width: none;
 }
 
 li .txt{
   margin: 15px auto;
-  max-width: 240px;
 }
 li .txt1{
   font-size: 1rem;
@@ -351,9 +353,6 @@ li .txt3 .txt4 .rev{
 #content3 .populer_slide div>li{
   margin: 0 10px;
 }
-#content3 .populer_slide .slick-slide:nth-child(odd){
-  margin-top: 20px;
-}
 #content3 .populer_slide li .img{
   position: relative;
   background-color: #f9f9f9;
@@ -393,6 +392,11 @@ li .img .icon_wrap .cart{
   background: url(../images/장바구니추가아이콘.png) no-repeat center/50% #fff;
 }
 
+#content3 .slick-slide:nth-child(odd),
+#content4 .slick-slide:nth-child(odd)
+{
+  margin-top: 20px;
+}
 #content3 .slick-prev,
 #content3 .slick-next,
 #content4 .slick-prev,
@@ -444,9 +448,6 @@ li .img .icon_wrap .cart{
 #content4 .cat_slide div>li{
   margin: 0 10px;
   /* pointer-events: none; */
-}
-#content4 .cat_slide .slick-slide:nth-child(odd){
-  margin-top: 20px;
 }
 #content4 .cat_slide li .img{
   position: relative;
