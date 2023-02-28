@@ -165,6 +165,15 @@ $(() => {
 		autoplaySpeed:4000,
 		pauseOnHover:true
 	})
+	$('.main_slide_mobile').slick({
+		infinite:true,
+		slidesToShow:1,
+		slidesToScroll:1,
+		dots:true,
+		autoplay:true,
+		autoplaySpeed:4000,
+		pauseOnHover:true
+	})
 	$('.recom_slide').slick({
 		infinite:true,
 		slidesToShow:2,
@@ -219,6 +228,15 @@ $(() => {
 		autoplaySpeed:4000,
 		pauseOnHover:true
 	})
+	$('.review_slide_mobile').slick({
+		infinite:true,
+		slidesToShow:1,
+		slidesToScroll:1,
+		dots:true,
+		autoplay:true,
+		autoplaySpeed:4000,
+		pauseOnHover:true
+	})
 	
 
 	const populer_slide = document.querySelector('.populer_slide')
@@ -226,6 +244,13 @@ $(() => {
 
 	populer_slide.appendChild(tape)
 	tape.classList.add('tape')
+	
+	$(window).resize(() => {
+
+		populer_slide.appendChild(tape)
+		tape.classList.add('tape')
+
+	});
 	
 
 	$('.cat_slide').mousedown((e)=>{
