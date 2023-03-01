@@ -88,7 +88,6 @@ $(() => {
 	const gnb_2depth = document.querySelectorAll('.gnb_2depth')
 	const gnb_first_li = document.querySelectorAll('.gnb_first>li')
 	const not_gnb_first = document.querySelectorAll('.gnb_2depth:not(.gnb_first)')
-	const gnb_3depth = document.querySelector('.gnb_3depth')
 	const smenu_wrap = document.querySelector('.smenu_wrap')
 	let window_width
 
@@ -116,7 +115,6 @@ $(() => {
 		
 
 	$(window).on('load resize', function() { 		
-		// console.log(gnb_3depth.getBoundingClientRect().left)
 		window_width = window.innerWidth
 	})
 	
@@ -126,7 +124,6 @@ $(() => {
 		gnb_first_li_ele.addEventListener('mouseenter', function(){
 
 			if(this.contains(this.children[1])){
-				// this.children[1].style.display='flex'
 				this.classList.add('on')
 				this.children[1].style.width = window_width - this.children[1].getBoundingClientRect().left - 37 + 'px'
 				
@@ -144,7 +141,6 @@ $(() => {
 		gnb_first_li_ele.addEventListener('mouseleave', function(){
 
 			if(this.contains(this.children[1])){
-				// this.children[1].style.display = 'none'
 				this.classList.remove('on')
 				smenu_wrap.style.height = 260 + 'px'
 
