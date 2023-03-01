@@ -105,7 +105,7 @@ header .menu_wrap .menu .gnb li .gnb_2depth li.on:hover a::before{
 }
 header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth{
   display: none;
-  top: -9.4px;
+  top: -10.9px;
   margin-left: 80px;
   position: absolute;
   height: 246px;
@@ -115,6 +115,7 @@ header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth{
   align-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 header .menu_wrap .menu .gnb li .gnb_2depth li:hover .gnb_3depth{
   display: flex;
@@ -318,7 +319,6 @@ li .txt3{
 }
 li .txt3 .txt4{
   position: absolute;
-  font-size: 1.2rem;
   top: 5px;
   right: 0;
 }
@@ -711,6 +711,12 @@ footer .txt_wrap .copy_wrap .copy_txt li:not(.first)::before{
   height: 12px;
   margin-right: 10px;
 }
+footer .txt_wrap .copy_wrap .copy_txt_mobile{
+  display: none;
+}
+footer .txt_wrap .copy_wrap .lang_mobile{
+  display: none;
+}
 footer .txt_wrap .copy_wrap .cs_txt{
   color: #ddd;
   margin-left: 110px
@@ -738,7 +744,7 @@ footer .txt_wrap .copy_wrap .cs_txt .cs_txt4{
   width: 70px;
   height: 68px;
   right: 50px;
-  bottom: 130px;
+  bottom: 50px;
   background: url(../images/top버튼.png) no-repeat center/cover;
   text-align: center;
   line-height: 30px;
