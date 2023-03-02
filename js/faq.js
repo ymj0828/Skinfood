@@ -67,4 +67,32 @@ $(() => {
 		})
 	})
 
+
+
+	const board_li = $('.board_list li')
+	const board_answer = $('.board_answer')
+
+
+	board_li.each((board_li_num_click, board_li_ele_click)=>{
+		board_li_ele_click.addEventListener('click', function(){
+
+			board_answer.each((num, board_answer_ele)=>{
+				$(board_answer_ele).slideUp(300)
+			})
+			console.log($(board_answer[board_li_num_click]).css('display') == 'block')
+			if($(board_answer[board_li_num_click]).css('display') == 'block') return
+
+			$(board_answer[board_li_num_click]).slideDown(300)
+
+
+		})
+
+	})
+
+
+
+
+
+
+
 });
