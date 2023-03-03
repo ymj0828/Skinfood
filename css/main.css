@@ -146,10 +146,10 @@ header .menu_wrap .menu .gnb_icon a{
   display: block;
 }
 header .menu_wrap .menu .gnb_icon .search{
-  background: url(../images/검색아이콘.png) no-repeat;
+  background: url(../images/검색아이콘.png) no-repeat center/cover;
 }
 header .menu_wrap .menu .gnb_icon .basket{
-  background: url(../images/장바구니아이콘.png) no-repeat;
+  background: url(../images/장바구니아이콘.png) no-repeat center/cover;
 }
 header .smenu_wrap{
   display: none;

@@ -3,13 +3,18 @@
 @import url(reset.css);
 @import url(common.css);
 
-html{
-  font-size: 15px;
-}
 body{
   max-width: 1920px;
   margin: 0 auto;
 }
+
+header .menu_wrap .menu .mobile_back_icon{
+  display: none;
+}
+header .menu_wrap .menu .mobile_gnb_btn{
+  display: none;
+}
+
 .faq_wrap{
   max-width: 1140px;
   margin: 0 auto;
@@ -105,15 +110,22 @@ body{
   z-index: -1;
 }
 .content_wrap .board_wrap .search{
-  background: url(../images/검색아이콘.png) no-repeat;
-  padding-left: 40px;
   border-bottom: 2px solid #fdb814;
-  padding-bottom: 10px;
+}
+.content_wrap .board_wrap .search::before{
+  background: url(../images/검색아이콘.png) no-repeat left/23px;
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  transform: translateY(7px);
+  cursor: pointer;
 }
 .content_wrap .board_wrap .search input{
   border: none;
   font-size: 15px;
   color: #888;
+  padding: 0 0 10px 15px;
 }
 .content_wrap .board_wrap .search input:focus{
   outline: none;
