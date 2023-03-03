@@ -26,61 +26,9 @@ const faqdata = {
 };
 
 $(() => {
+	
 
-	const board_list = document.querySelector('.board_list');
-	const tab_li = document.querySelectorAll('.tab li')
-
-	// console.log(Object.keys(faqdata))
-	// Object.keys(faqdata).forEach((ele, num)=>{
-		// })
-		// board_list.innerHTML=''
-		tab_li.forEach((tab_li_ele_click)=>{
-			tab_li_ele_click.addEventListener('click', function(){
-
-				if(tab_li_ele_click.classList.contains('active')) return;
-
-				tab_li.forEach((tab_li_ele)=>{
-					tab_li_ele.classList.remove('active')
-				})
-				tab_li_ele_click.classList.add('active')
-
-				board_list.innerHTML=''
-				
-				faqdata[tab_li_ele_click.innerText].질문.forEach((faqdata_ele, faqdata_num)=>{
-
-					board_list.innerHTML+=`<li>
-					<div class="board_title"><span class="board_cat">[${tab_li_ele_click.innerText}]</span> ${faqdata[tab_li_ele_click.innerText].질문[faqdata_num]}
-						<div class="board_answer">${faqdata[tab_li_ele_click.innerText].답변[faqdata_num]}
-						</div>
-					</div>
-					<div class="board_btn"></div>
-				</li>`
-
-				})
-				boardSlide()
-				
-			})
-	})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
 
 	const gnb = document.querySelector('.gnb')
 	const gnb_2depth = document.querySelectorAll('.gnb_2depth')
@@ -149,31 +97,81 @@ $(() => {
 		})
 	})
 
+	const board_list = document.querySelector('.board_list');
+	const tab_li = document.querySelectorAll('.tab li')
+	
+	Object.keys(faqdata).forEach((faqdata_key_ele)=>{
+		faqdataHtml(faqdata_key_ele)
+	})
+	tab_li[0].classList.add('active')
 
+	tab_li.forEach((tab_li_ele_click)=>{
+		tab_li_ele_click.addEventListener('click', function(){
 
-function boardSlide(){
+			if(tab_li_ele_click.classList.contains('active')) return;
 
-	const board_li = $('.board_list li')
-	const board_answer = $('.board_answer')
-
-
-	board_li.each((board_li_num_click, board_li_ele_click)=>{
-		board_li_ele_click.addEventListener('click', function(){
-
-			board_answer.each((num, board_answer_ele)=>{
-				$(board_answer_ele).slideUp(300)
+			tab_li.forEach((tab_li_ele)=>{
+				tab_li_ele.classList.remove('active')
 			})
+			tab_li_ele_click.classList.add('active')
 
-			if($(board_answer[board_li_num_click]).css('display') == 'block') return
+			board_list.innerHTML=''
 
-			$(board_answer[board_li_num_click]).slideDown(300)
+			if(tab_li_ele_click.innerText=='전체보기'){
+				Object.keys(faqdata).forEach((faqdata_key_ele)=>{
+					faqdataHtml(faqdata_key_ele)
+				})
+			}else{
+				faqdataHtml(tab_li_ele_click.innerText)
+			}
 
+		})
+	})
+		
+	function faqdataHtml(key){
+		
+		faqdata[key].질문.forEach((faqdata_ele, faqdata_num)=>{
+			
+			board_list.innerHTML+=`<li>
+			<div class="board_title"><span class="board_cat">[${key}]</span> ${faqdata_ele}
+			<div class="board_answer">${faqdata[key].답변[faqdata_num]}
+			</div>
+			</div>
+			<div class="board_btn"></div>
+			</li>`
+			boardSlide()
+			
+		})
+
+	}
+
+	function boardSlide(){
+
+		const board_li = $('.board_list li')
+		const board_answer = $('.board_answer')
+		const board_btn = $('.board_btn')
+
+		board_li.each((board_li_num_click, board_li_ele_click)=>{
+			board_li_ele_click.addEventListener('click', function(){
+
+				board_answer.each((num, board_answer_ele)=>{
+					$(board_answer_ele).slideUp(300)
+				})
+				board_btn.each((num, board_btn_ele)=>{
+					$(board_btn_ele).removeClass('active')
+				})
+
+				if($(board_answer[board_li_num_click]).css('display') == 'block') return
+
+				$(board_answer[board_li_num_click]).slideDown(300)
+				$(board_btn[board_li_num_click]).addClass('active')
+
+
+			})
 
 		})
 
-	})
-
-}
+	}
 
 
 

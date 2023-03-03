@@ -35,11 +35,14 @@ body{
 }
 .content_wrap{
   display: flex;
+  margin-bottom: 50px;
 }
 .content_wrap .side_wrap{
   border-top: 3px solid #000;
-  padding: 29px 25px 39px 29px;
+  padding: 30px 25px;
   margin-right: 40px;
+  flex-shrink: 0;
+  /* background-color: red; */
 }
 .content_wrap .side_wrap .title{
   font-size: 27px;
@@ -80,6 +83,7 @@ body{
 }
 .content_wrap .board_wrap{
   width: 100%;
+  /* background-color: green; */
 }
 .content_wrap .board_wrap .title{
   position: relative;
@@ -147,6 +151,9 @@ body{
 .content_wrap .board_wrap .tab li:first-child{
   padding-left: 0;
 }
+.content_wrap .board_wrap .tab li:last-child{
+  padding-right: 0;
+}
 .content_wrap .board_wrap .tab li.active{
   font-weight: bold;
   color: #212121;
@@ -161,7 +168,7 @@ body{
   background: #999;
 }
 .content_wrap .board_wrap .board_list{
-  margin-top: 10px;
+  margin-top: 15px;
   border-top: 1px solid #212121;
   border-bottom: 1px solid #212121;
 }
@@ -191,4 +198,7 @@ body{
   background: url(../images/faq_icon_plus.png) no-repeat center;
   height: 63px;
   flex-shrink: 0;
+}
+.content_wrap .board_wrap .board_list li .board_btn.active{
+  background: url(../images/faq_icon_minus.png) no-repeat center;
 }

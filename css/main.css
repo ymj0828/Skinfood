@@ -121,12 +121,6 @@ header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth{
 header .menu_wrap .menu .gnb li .gnb_2depth li:hover .gnb_3depth{
   display: flex;
 }
-/* header .menu .gnb li .gnb_2depth li:nth-child(4) .gnb_3depth{
-  display: flex;
-} */
-/* header .menu .gnb li .gnb_2depth li:hover .gnb_3depth{
-  display: block;
-} */
 header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth li{
   width: 100px;
   font-weight: normal;
@@ -454,7 +448,6 @@ li .img .icon_wrap .cart{
 }
 #content4 .cat_slide div>li{
   margin: 0 10px;
-  /* pointer-events: none; */
 }
 #content4 .cat_slide li .img{
   position: relative;
