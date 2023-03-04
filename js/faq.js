@@ -99,6 +99,17 @@ $(() => {
 
 	const board_list = document.querySelector('.board_list');
 	const tab_li = document.querySelectorAll('.tab li')
+	const tab_opt= document.querySelectorAll('.mobile_tab')
+
+	
+	tab_opt.forEach((tab_opt_ele_change)=>{
+		tab_opt_ele_change.addEventListener('change', function(){
+
+			textIf(tab_opt_ele_change.value)
+
+		})
+	})
+
 	
 	Object.keys(faqdata).forEach((faqdata_key_ele)=>{
 		faqdataHtml(faqdata_key_ele)
@@ -115,18 +126,25 @@ $(() => {
 			})
 			tab_li_ele_click.classList.add('active')
 
-			board_list.innerHTML=''
 
-			if(tab_li_ele_click.innerText=='전체보기'){
-				Object.keys(faqdata).forEach((faqdata_key_ele)=>{
-					faqdataHtml(faqdata_key_ele)
-				})
-			}else{
-				faqdataHtml(tab_li_ele_click.innerText)
-			}
+			textIf(tab_li_ele_click.innerText)
 
 		})
 	})
+
+
+
+	function textIf(tab_text){
+		board_list.innerHTML=''
+
+		if(tab_text=='전체보기'){
+			Object.keys(faqdata).forEach((faqdata_key_ele)=>{
+				faqdataHtml(faqdata_key_ele)
+			})
+		}else{
+			faqdataHtml(tab_text)
+		}
+	}
 		
 	function faqdataHtml(key){
 		
@@ -154,6 +172,9 @@ $(() => {
 		board_li.each((board_li_num_click, board_li_ele_click)=>{
 			board_li_ele_click.addEventListener('click', function(){
 
+				board_li.each((num, board_li_ele)=>{
+					$(board_li_ele).css({backgroundColor:'#fff'})
+				})
 				board_answer.each((num, board_answer_ele)=>{
 					$(board_answer_ele).slideUp(300)
 				})
@@ -163,6 +184,9 @@ $(() => {
 
 				if($(board_answer[board_li_num_click]).css('display') == 'block') return
 
+				if(window.innerWidth < 721){
+					$(board_li[board_li_num_click]).css({backgroundColor:'#f6f6f6'})
+				}
 				$(board_answer[board_li_num_click]).slideDown(300)
 				$(board_btn[board_li_num_click]).addClass('active')
 
