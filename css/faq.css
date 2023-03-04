@@ -11,7 +11,11 @@ body{
 header .menu_wrap .menu .mobile_back_icon{
   display: none;
 }
-header .menu_wrap .menu .mobile_gnb_btn{
+header .menu_wrap .menu .mobile_nav_btn{
+  display: none;
+}
+
+.mobile_nav{
   display: none;
 }
 
@@ -47,7 +51,6 @@ header .menu_wrap .menu .mobile_gnb_btn{
   padding: 30px 25px;
   margin-right: 40px;
   flex-shrink: 0;
-  /* background-color: red; */
 }
 .content_wrap .side_wrap .title{
   font-size: 27px;
@@ -84,11 +87,9 @@ header .menu_wrap .menu .mobile_gnb_btn{
   text-align: center;
   border: 1px solid #222;
   font-weight: bold;
-  cursor: pointer;
 }
 .content_wrap .board_wrap{
   width: 100%;
-  /* background-color: green; */
 }
 .content_wrap .board_wrap .title{
   position: relative;
@@ -139,7 +140,6 @@ header .menu_wrap .menu .mobile_gnb_btn{
 }
 .content_wrap .board_wrap .inq strong{
   position: relative;
-  cursor: pointer;
 }
 .content_wrap .board_wrap .inq strong::after{
   position: absolute;

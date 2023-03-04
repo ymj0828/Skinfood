@@ -43,21 +43,21 @@
     width: 70px;
     height: 40px;
   }
-  header .menu_wrap .menu .mobile_gnb_btn{
+  header .menu_wrap .menu .mobile_nav_btn{
     display: block;
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.5s;
   }
-  header .menu_wrap .menu .mobile_gnb_btn::after{
+  header .menu_wrap .menu .mobile_nav_btn::after{
     background: url(../images/faq_icon_nav.png) no-repeat center/25px;
     content: '';
     display: inline-block;
     width: 40px;
     height: 26px;
+    transition: transform 0.2s;
   }
-  header .menu_wrap .menu .mobile_gnb_btn.on{
+  header .menu_wrap .menu .mobile_nav_btn.on::after{
     transform: rotate(-180deg);
   }
   header .menu_wrap .menu .gnb_icon a{
@@ -66,7 +66,45 @@
   }
   header .menu_wrap .menu .gnb_icon a:first-child{
     margin-left: 0;
+    margin-right: 15px;
   }
+  header .menu_wrap .menu .gnb_icon a:last-child::after{
+    position: absolute;
+    text-align: center;
+    line-height: 25px;
+    font-size: 21px;
+    content: '0';
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #fdb812;
+    display: block;
+    top: 25px;
+    right: 10px;
+  }
+
+  .mobile_nav{
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 60px 36px;
+    z-index: 2;
+    box-sizing: border-box;
+  }
+  .mobile_nav li{
+    font-weight: bold;
+    font-size: 34px;
+    width: 100%;
+    padding: 60px 0 0 30px;
+  }
+  .mobile_nav li:first-child{
+    font-size: 36px;
+    border-bottom: 2px solid #eee;
+    padding: 0 0 60px 0;
+  }
+
   .cat_depth{
     display: none;
   }
@@ -112,6 +150,8 @@
     font-size: 25px;
     padding: 0 35px;
     border: 2px solid #ddd;
+    appearance: none;
+    background: url(../images/faq_select_icon.png) no-repeat 95%/25px;
   }
   .content_wrap .board_wrap .mobile_tab:focus-visible{
     outline: none;
@@ -119,10 +159,11 @@
   .content_wrap .board_wrap .board_list{
     margin-top: 75px;
     border-top: none;
-    border-bottom: 1px solid #212121;
+    border-bottom: 2px solid #eee;
   }
   .content_wrap .board_wrap .board_list li{
     padding: 50px 35px;
+    border-top: 4px solid #eee;
   }
   .content_wrap .board_wrap .board_list li .board_title{
     line-height: 1.5;
@@ -146,4 +187,34 @@
     background: url(../images/faq_icon_minus_mobile.png) no-repeat center/contain;
   }
 
+  @media screen and (max-width: 540px){
+    header .menu_wrap .menu .mobile_nav_btn{
+      font-size: 28px;
+    }
+    header .menu_wrap .menu .mobile_nav_btn::after{
+      background: url(../images/faq_icon_nav.png) no-repeat center/20px;
+      width: 20px;
+      height: 20px;
+    }
+    .content_wrap .board_wrap .search{
+      margin: 50px 20px 0;
+    }
+    .content_wrap .board_wrap .inq{
+      font-size: 18px;
+      margin: 20px 20px 0;
+    }
+    .content_wrap .board_wrap .mobile_tab{
+      width: calc(100% - 40px);
+      margin: 30px 20px 0;
+    }
+    .content_wrap .board_wrap .board_list{
+      margin-top: 50px;
+    }
+    .content_wrap .board_wrap .board_list li{
+      padding: 30px 20px;
+    }
+    .content_wrap .board_wrap .board_list li .board_title{
+      font-size: 23px;
+    }
+  }
 }

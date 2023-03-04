@@ -27,7 +27,13 @@ const faqdata = {
 
 $(() => {
 	
+	const mobile_nav_btn = document.querySelector('.mobile_nav_btn')
+	const mobile_nav = document.querySelector('.mobile_nav')
 
+	mobile_nav_btn.addEventListener('click', function(){
+		$(mobile_nav_btn).toggleClass('on')
+		$(mobile_nav).stop().slideToggle(200)
+	});
 		
 
 	const gnb = document.querySelector('.gnb')
