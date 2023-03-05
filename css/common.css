@@ -460,7 +460,7 @@ footer .txt_wrap .copy_wrap .cs_txt .cs_txt4{
     aspect-ratio: 1.2;
     background-repeat: no-repeat;
     background-position: center 20px;
-    background-size: max(30px, 30%)/* 30% */;
+    background-size: max(30px, 30%);
   }
   .mquick li:nth-child(1){
     background-image: url('../images/모바일_홈.png');

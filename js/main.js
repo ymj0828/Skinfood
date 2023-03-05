@@ -407,6 +407,13 @@ $(() => {
 	});
 
 
+	$("a").click(function(){
+		if(this.href=='javascript:;'){
+			alert("홈, 로그인, FAQ 페이지만 들어가실 수 있습니다.");
+		};
+	});
+
+
 
 
 });

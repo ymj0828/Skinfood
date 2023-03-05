@@ -1,92 +1,12 @@
 @charset "utf-8";
 
-@media screen and (max-width: 1100px){
-  footer{
-    padding-top: 156px;
-  }
-  footer .txt_wrap .nav_wrap{
-    justify-content: space-around;
-  }
-  footer .txt_wrap .nav_wrap .nav_txt{
-    margin-bottom: 20px;
-  }
-  footer .txt_wrap .nav_wrap .seletsns_wrap .sns_txt{
-    margin-left: 30px;
-  }
-  footer .txt_wrap .copy_wrap{
-    padding-bottom: 30px;
-  }
-}
-
 @media screen and (max-width: 900px){
-  html{
-    font-size: 12px;
-  }
-  header .menu_wrap .menu .gnb>li{
-    margin-right: 50px;
-  }
-  header .smenu_wrap .smenu .img{
-    display: none;
-  }
-  header .menu_wrap .menu .gnb li:first-child .gnb_2depth{
-    transform: translateX(-20px);
-  }
-  header .menu_wrap .menu .gnb li .gnb_2depth li{
-    letter-spacing: -1px;
-  }
-  header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth{
-    top: -9.4px;
-    margin-left: 50px;
-  }
-  header .menu_wrap .menu .gnb li .gnb_2depth li .gnb_3depth li{
-    padding-right: 0px;
-  }
   #content4 .cat_item li{
     margin: 0 9px;
-  }
-  footer{
-    padding-top: 100px;
-  }
-  footer .txt_wrap .copy_wrap{
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-  footer .txt_wrap .copy_wrap .cs_txt{
-    margin-top: 20px;
-    margin-left: 0px;
-    display: flex;
-    align-items: center;
-  }
-  footer .txt_wrap .copy_wrap .cs_txt p{
-    margin-right: 15px;
-  }
-  footer .txt_wrap .copy_wrap .cs_txt .cs_txt_wrap{
-    display: flex;
-  }
-  footer .txt_wrap .copy_wrap .cs_txt .cs_txt4{
-    margin-top: 0;
   }
 }
 
 @media screen and (max-width: 720px){
-  html{
-    font-size: 15px;
-  }
-  header{
-    top: 0;
-    position: sticky;
-    z-index: 3;
-  }
-  header .tmenu_wrap{
-    display: none;
-  }
-  header .menu_wrap .menu{
-    padding: 0 20px;
-  }
-  header .menu_wrap .menu .gnb{
-    display: none;
-  }
   header .mgnb{
     display: flex;
     justify-content: space-around;
@@ -106,47 +26,6 @@
   header .mgnb li:hover{
     font-weight: bold;
     border-bottom: 5px solid #fdb812;
-  }
-
-  .mquick{
-    border-top: 5px solid #ddd;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    background-color: #fff;
-    width: 100%;
-    z-index: 3;
-  }
-  .mquick li{
-    flex: 1;
-    aspect-ratio: 1.2;
-    background-repeat: no-repeat;
-    background-position: center 20px;
-    background-size: max(30px, 30%)/* 30% */;
-  }
-  .mquick li:nth-child(1){
-    background-image: url('../images/모바일_홈.png');
-    background-position: center 15px;
-  }
-  .mquick li:nth-child(2){
-    background-image: url('../images/모바일_카테고리.png');
-  }
-  .mquick li:nth-child(3){
-    background-image: url('../images/모바일_마이페이지.png');
-  }
-  .mquick li:nth-child(4){
-    background-image: url('../images/모바일_멤버십.png');
-    background-position: center 25px;
-  }
-  .mquick li:nth-child(5){
-    background-image: url('../images/모바일_최근.png');
-  }
-  .mquick li a{
-    display: block;
-    height: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 9;
   }
 
   .slick-prev,
@@ -246,69 +125,15 @@
   #content6 .photo{
     grid-gap: 4px;
   }
-  
-  .empty{
-    aspect-ratio: 6;
-    width: 100%;
-    border-top: 5px solid #ddd;
-  }
-
-  .top_btn{
-    width: 50px;
-    height: 48px;
-    right: 20px;
-    bottom: 130px;
-    line-height: 20px;
-    font-size: 11px;
-  }
-  .top_btn::before{
-    margin: 10px auto 0;
-  }
 }
 
 @media screen and (max-width: 650px){
-  html{
-    font-size: 14px;
-  }
-
   #content2 .recom_slide li .recom_bottom .txt{
     margin: 20px;
-  }
-
-  footer .txt_wrap .nav_wrap .nav_txt{
-    flex-wrap: wrap;
-  }
-  footer .txt_wrap .nav_wrap .nav_txt li{
-    padding-right: 5px;
-  }
-  footer .txt_wrap .nav_wrap .nav_txt li a{
-    padding-right: 5px;
-  }
-  footer .txt_wrap .copy_wrap .copy_txt li{
-    margin-left: 3px;
-  }
-  footer .txt_wrap .copy_wrap .copy_txt li:not(.first)::before{
-    margin-right: 3px;
-  }
-  footer .txt_wrap .copy_wrap .cs_txt p{
-    margin-right: 10px;
   }
 }
 
 @media screen and (max-width: 540px){
-  html{
-    font-size: 12px;
-  }
-
-  .mquick li{
-    min-height: 80px;
-    aspect-ratio: 0;
-  }
-  .mquick li a{
-    height: 80px;
-    font-size: 13px;
-  }
-
   .content p a::after{
     vertical-align: top;
   }
@@ -329,80 +154,5 @@
 
   #content6 .instagram .follow{
     width: 70px;
-  }
-
-  footer{
-    height: 400px;
-  }
-  footer .txt_wrap .nav_wrap .nav_txt{
-    justify-content: center;
-    margin-bottom: 5px;
-  }
-  footer .txt_wrap .nav_wrap .nav_txt li{
-    padding-bottom: 5px;
-  }
-  footer .txt_wrap .nav_wrap .nav_txt li a{
-    border-right: none;
-  }
-  footer .txt_wrap .nav_wrap .seletsns_wrap{
-    flex-wrap: wrap;
-  }
-  footer .txt_wrap .nav_wrap .seletsns_wrap .sns_txt{
-    margin-left: 0px;
-  }
-  footer .txt_wrap .nav_wrap .seletsns_wrap .select .select_btn:nth-child(2){
-    display: none;
-  }
-  footer .txt_wrap .copy_wrap{
-    flex-wrap: wrap;
-    align-content: start;
-    margin-left: 20px;
-  }
-  footer .txt_wrap .copy_wrap .copy_txt{
-    display: none;
-  }
-  footer .txt_wrap .copy_wrap .copy_txt_mobile{
-    display: flex;
-    flex-direction: column;
-    align-self: start;
-  }
-  footer .txt_wrap .copy_wrap .copy_txt_mobile li{
-    margin-top: 7px;
-    font-size: 13px;
-  }
-  footer .txt_wrap .copy_wrap .lang_mobile{
-    display: block;
-    font-size: 15px;
-    background-color: #3B240B;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  footer .txt_wrap .copy_wrap .lang_mobile span:last-child::before{
-    background-color: #ddd;
-    content: '';
-    width: 1px;
-    display: inline-block;
-    height: 12px;
-    margin-right: 5px;
-  }
-  footer .txt_wrap .copy_wrap .cs_txt{
-    margin-top: 10px;
-    flex-wrap: wrap;
-  }
-  footer .txt_wrap .copy_wrap .cs_txt .cs_txt_wrap{
-    flex-direction: column;
-  }
-
-  .empty{
-    height: 80px;
-  }
-}
-
-@media screen and (max-width: 360px){
-  body{
-    width: 360px;
-  }
-  .mquick{
-    width: 360px;
   }
 }
